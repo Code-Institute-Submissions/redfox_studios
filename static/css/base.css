@@ -15,6 +15,16 @@ html {
 
 /*--- navbar ----- */
 
+.collapse {
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient( #8e9eab, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(#8e9eab,  #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar-toggler-item {
+    color: #000000;
+}
+
 .nav-logo {
     margin: 0 auto;
 }
@@ -22,6 +32,35 @@ html {
 .align-right {
     padding-left: 12%;
 }
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-text {
+    word-spacing: 3em;
+}
+
+.collapse {
+    padding-top: 3em;
+}
+
+/* ---- search bar  -----*/
+
+.search-bar {
+    letter-spacing: 6px;
+    padding: 9px;
+    margin: 3px;
+}
+
+/* --- footer ----*/
+
+.footer {
+    background-color: #8e9eab;
+}
+
+
+
 
 /* -------------------------------- Media Queries */
 
