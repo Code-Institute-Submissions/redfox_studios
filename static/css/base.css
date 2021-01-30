@@ -12,6 +12,13 @@ html {
 }
 
 
+/*--- navbar ----- */
+
+.nav-logo {
+    margin: 0 auto;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
