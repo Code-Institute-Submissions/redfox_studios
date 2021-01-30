@@ -19,7 +19,9 @@ html {
     margin: 0 auto;
 }
 
-
+.align-right {
+    padding-left: 12%;
+}
 
 /* -------------------------------- Media Queries */
 
