@@ -91,16 +91,10 @@
     <div class="row search-bar">
              <!-- user registration login and card -->
           
-              <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-                <div>
-                    <i class="fas fa-user"></i>Account
-                    <i class="fas fa-shopping-bag"></i>Bag
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 text-center"> 
+                    <i class="fas fa-user">Account</i>
+              </div>
+
                 <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
@@ -126,6 +120,16 @@
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                 </div>
+
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'show_bag' %}">
+                                <i class="fas fa-shopping-bag fa-lg">{% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}</i>
+                    </a>
+
+
             </div>
          </div>
        
