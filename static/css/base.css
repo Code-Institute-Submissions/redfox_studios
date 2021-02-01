@@ -15,7 +15,9 @@ html {
 
 /*--- navbar ----- */
 
-
+.navbar {
+    background-image: linear-gradient(#ffffff, #8e9eab);
+}
 
 .navbar-toggler-item {
     color: #000000;
@@ -41,6 +43,24 @@ html {
     padding-top: 3em;
 }
 
+.fas {
+    letter-spacing: 3pt;
+}
+
+/*---- font colors ---- */
+
+.red {
+    color: #ff0000;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.green {
+    color: #008000;
+}
+
 /* ---- search bar  -----*/
 
 .search-bar {
@@ -56,7 +76,8 @@ html {
 /* --- footer ----*/
 
 .footer {
-    background-color: #8e9eab;
+    background-image: linear-gradient(#8e9eab, #ffffff);
+    
 }
 
 /* shop button */
