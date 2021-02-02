@@ -137,28 +137,33 @@
 
         <br />
 
+        
+
         {% if messages %}
         <div class="message-container"></div>
-        {% endif %} {% block page_header %} {% endblock %} {% block content %} {% endblock %} {% block postloadjs %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        {% endblock %}
+        {% endif %} 
+        {% block page_header %} 
+        {% endblock %} 
+        {% block content %} 
+        {% endblock %} 
 
-        <nav class="footer w-100">
+         <footer class="bg-dark w-100">
             <div class="container text-left">
                 <div class="row">
                     <h4>Red Fox Studios</h4>
                 </div>
             </div>
 
-            <div class="col-12">
-                <ul class="nav-list text-center">
-                    <li><h6>About</h6></li>
-                    <li><h6>Shop</h6></li>
-                    <li><h6>Blog</h6></li>
-                    <li><h6>Login</h6></li>
-                    <li><h6>Register</h6></li>
-                </ul>
-            </div>
-        </nav>
+            
+        </footer>
+
+
+
+        {% block postloadjs %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+         <script src="{% static 'js/base.js' %}"></script>
+        {% endblock %}
+
+       
     </body>
 </html>
