@@ -16,7 +16,7 @@ html {
 /*--- navbar ----- */
 
 .navbar {
-    background-image: linear-gradient(#ffffff, #8e9eab);
+    background-image: linear-gradient(#8e9eab, #ffffff);
 }
 
 .navbar-toggler-item {
