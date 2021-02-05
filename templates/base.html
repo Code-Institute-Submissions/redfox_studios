@@ -58,7 +58,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i>My Account</div>
+                                <div><i class="fas fa-user fa-lg"></i>Account</div>
                                 
                             </div>
                         </a>
@@ -78,7 +78,7 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'show_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i>Total:
+                                <div><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -99,16 +99,16 @@
       <div class="navbar-collapse collapse" id="navbarsExample01" >
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'products' %}">Shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About the Studio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Inspirations</a>
           </li>
         </ul>
       </div>
@@ -173,10 +173,11 @@
         {% endblock %} 
 
         {% block postloadjs %}
-            <script src="{% static 'js/base.js' %}"></script>
-            <script type="text/javascript">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="{% static 'js/base.js' %}"></script>
+        <script type="text/javascript">
                 $('.toast').toast('show');
-            </script>
+        </script>
         {% endblock %}
 
        
