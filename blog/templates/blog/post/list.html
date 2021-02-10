@@ -61,9 +61,9 @@
  <hr class="featurette-divider">
 
  
-
-
-  {% endfor %}
+{% endfor %}
+ 
+{% include "pagination.html" with page=posts %}
  
 </div>
     {% endblock %}
