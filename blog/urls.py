@@ -1,9 +1,6 @@
 from django.urls import path
 from . import views
 # Import settings if not imported
-from django.conf import settings
-# Import static if not imported
-from django.conf.urls.static import static
 
 app_name = 'blog'
 
