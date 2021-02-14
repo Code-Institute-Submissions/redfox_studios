@@ -54,6 +54,20 @@ html {
 
 }
 
+.sticky-top {
+  position: fixed;
+  width: 100%;
+}
+
+li {
+    display: inline-block;
+   
+}
+
+.align-right {
+    display: inline;
+}
+
 
 .footer {
     background-color: #000000;  
@@ -314,4 +328,12 @@ html {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+
+
+/*. About page. */
+
+.background-secondary {
+    background-color: #495057;
 }
