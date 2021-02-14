@@ -47,36 +47,10 @@ html {
 /*--- navbar ----- */
 
 .navbar {
-    background-image: linear-gradient(#8e9eab, #ffffff);
+    color: black;
+    padding: 12px;
 }
 
-.navbar-toggler-item {
-    color: #000000;
-}
-
-.nav-logo {
-    margin: 0 auto;
-}
-
-.align-right {
-    padding-left: 12%;
-}
-
-.nav-list {
-    list-style-type: none;
-}
-
-.nav-text {
-    word-spacing: 3em;
-}
-
-.collapse {
-    padding-top: 3em;
-}
-
-.fas {
-    letter-spacing: 3pt;
-}
 
 /*---- font colors ---- */
 
@@ -92,6 +66,13 @@ html {
     color: #008000;
 }
 
+.white {
+    color: #ffffff;
+}
+
+.black {
+    color: #000000;
+}
 
 /* ------------------------------- bootstrap toasts */
 

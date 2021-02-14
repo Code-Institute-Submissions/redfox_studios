@@ -37,32 +37,37 @@
     </head>
     <body>
         
-       <!-- navbar  -->
-    <nav class="navbar fixed-top" aria-label="First navbar example">
-    <div class="nav-extended container-fluid">
-        <div class="row w-100">
-            <div class="col-3">
-                <a class="navbar-brand" href="#"></a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars fa-lg"></i>
-                    </button>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar bg text-center" aria-label="navbar">
+    <div class="container-fluid">
+      <button class="navbar-toggler collapsed black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
 
-    <!-- logo -->
-            <div class="col-6 text-center">
-                <div class="nav-logo">test image</div>
-            </div>
+      <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'products' %}" tabindex="-1" aria-disabled="false">Shop</a>
+          </li>
+      
 
-            <div class="col-3">
-                <ul class="list-inline list-unstyled text-center my-0">
+    <!-- Dropdown -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i>Account</div>
-                                
+                                <p class="my-0"><i class="fas fa-user fa-lg"></i> My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0 text-right" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -75,44 +80,32 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
+                    
+                <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'show_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i>
+                                
+                                <p class="my-0"><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
                                         $0.00
-                                    {% endif %} 
-                                </div>
-                                
+                                    {% endif %}
+                                </p>
                             </div>
                         </a>
                     </li>
                 </ul>
-            </div>
-        </div>
+            
 
 
-      <div class="navbar-collapse collapse" id="navbarsExample01" >
-        <ul class="navbar-nav text-center">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'products' %}">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About the Studio</a>
-          </li>
-        </ul>
+        
       </div>
     </div>
   </nav>
-                    
+
+
+                        
           
 
         <!-- site banner -->
@@ -120,7 +113,7 @@
         <div class="background-image"></div>
        
         <!-- site search and shop categories -->
-
+        <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3"></div>
 
@@ -142,6 +135,7 @@
 
             <div class="col-lg-3 col-md-3"></div>
         </div>
+    </div>
 
         <br />
 
