@@ -12,3 +12,31 @@
         });
     });
 
+     $(function () {
+        $("#show1").click(function () {
+            $(".old-about").slideToggle("slow");
+        });
+    });
+
+
+     $(function () {
+        $("#hide1").click(function () {
+            $(".new-about").slideToggle("slow");
+        });
+    });
+
+     $(function () {
+        $("#show2").click(function () {
+            $(".old-about").slideToggle("slow");
+        });
+    });
+
+
+     $(function () {
+        $("#hide2").click(function () {
+            $(".new-about").slideToggle("slow");
+        });
+    });
+
+
+
