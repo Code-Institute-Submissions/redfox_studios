@@ -58,7 +58,14 @@ html {
     padding: 12px;
     background-color: #ffffff;  
     opacity: 1;
+}
 
+.paragraph-space {
+    margin-top: 40px;
+}
+
+.paragraph-space-double {
+    margin-top: 80px;
 }
 
 
