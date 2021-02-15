@@ -72,9 +72,14 @@ li {
 
 .footer {
     background-color: #000000;  
-    
-   
 }
+
+.background-black {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
 
 
 /*---- font colors ---- */
@@ -338,4 +343,12 @@ li {
 
 .background-secondary {
     background-color: #495057;
+}
+
+.old-about {
+    display: none;
+}
+
+.new-about {
+    display: none;
 }
