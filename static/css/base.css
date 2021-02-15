@@ -87,21 +87,21 @@ html {
 }
 
 .background-black-white {
-    background-image: linear-gradient(to right, #000000, #E6DADA)
+    background-image: linear-gradient(to right, #000000, #E6DADA,#ffffff)
 }
 
 .background-black-red {
-    background-image: linear-gradient(to right, #000000, #e74c3c);
+    background-image: linear-gradient(to right, #000000, #e74c3c, #ffffff);
     color: #ffffff;
 }
 
 .background-black-blue {
-    background-image: linear-gradient(to right, #000000, #004e92);
+    background-image: linear-gradient(to right, #000000, #004e92, #ffffff);
     color: #ffffff;
 }
 
 .background-black-green {
-    background-image: linear-gradient(to right, #000000, #0f9b0f);
+    background-image: linear-gradient(to right, #000000, #0f9b0f, #ffffff);
     color: #ffffff;
 }
 
@@ -111,8 +111,9 @@ html {
 }
 
 .footer {
-    background-color: #000000;  
+    background-color: #ffffff;  
     padding-top: 12px;
+    color: #000000;
 }
 
 /*---- font colors ---- */
