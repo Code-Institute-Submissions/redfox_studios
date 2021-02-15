@@ -411,3 +411,8 @@ nav a {
 .fox-home {
     margin-top: 15%;
 }
+
+
+textarea {
+    width: 300px;
+}
