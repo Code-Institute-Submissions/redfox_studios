@@ -14,7 +14,8 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">    
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -114,7 +115,7 @@
                     <li class="list-inline-item paragraph-space-double">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <h5 class="my-0">My Account</h5>
+                                <h5 class="my-0 underline">My Account</h5>
                             </div>
                         </a>
                         <div class="border-0 text-center nav-drop-text" aria-labelledby="user-options">
@@ -199,36 +200,15 @@
     <br>
     <br>
 
-<div class="row white">
-    <div class="col-4">
-        <h5>Links</h5>
-    </div>
-    <div class="col-4">
-         <h5>Social</h5>
-    </div>
-    <div class="col-4">
-        <h5>Contact</h5>
-    </div>
-</div>
 
-<div class="row white">
-    <div class="col-4">
-        <i class="fab fa-connectdevelop fa-lg"></i>
-    </div>
-    <div class="col-4">
-         <i class="fas fa-hashtag fa-lg"></i>
-    </div>
-    <div class="col-4">
-        <i class="fas fa-globe-europe fa-lg"></i>
-    </div>
-</div>
+
 
 <br>
  
-  <div class="row">
+  <div class="row white">
     <div class="col-lg-4 col-md-4 col-sm-12">
-  
       <ul class="footer-list text-left">
+        <li class="list-inline-item text-center"><span><i class="fab fa-connectdevelop fa-lg"></i></span><h5 class="underline">Links</h5></li>
         <li class="list-inline-item"><a class="link-secondary" href="#">Home</a></li>
         <li class="list-inline-item"><a class="link-secondary" href="#">About</a></li>
         <li class="list-inline-item"><a class="link-secondary" href="#">Blog</a></li>
@@ -237,17 +217,19 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
       <ul class="footer-list text-left">
+        <li class="list-inline-item text-center"><span><i class="fas fa-hashtag fa-lg"></i></span><h5 class="underline">Social</h5></li>
         <li class="list-inline-item"><a class="link-secondary" href="#"><i class="fab fa-tiktok fa-lg"></i> Tik Tok</a></li>
         <li class="list-inline-item"><a class="link-secondary" href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a></li>
         <li class="list-inline-item"><a class="link-secondary" href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a></li>
-        <li class="list-inline-item"><a class="link-secondary" href="#"><i class="fab fa-instagram-square fa-lg"> Instagram</i></a></li>
+        <li class="list-inline-item"><a class="link-secondary" href="#"><i class="fab fa-instagram-square fa-lg"></i> Instagram</a></li>
       </ul>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12">
       <ul class="text-left footer-list">
-        <li class="list-inline-item"><a class="link-secondary" href="#">Phone: </a></li>
-        <li class="list-inline-item"><a class="link-secondary" href="#">Email: </a></li>
-        <li class="list-inline-item"><a class="link-secondary" href="#">Address: </a></li>
+        <li class="list-inline-item text-center"><span><i class="fas fa-globe-europe fa-lg"></i></span><h5 class="underline">Contact</h5></li>
+        <li class="list-inline-item">Phone: </li>
+        <li class="list-inline-item">Email: </li>
+        <li class="list-inline-item">Address: </li>
       </ul>
     </div>
     </div>

@@ -3,6 +3,10 @@ html {
     width: 100%;
 }
 
+body {
+    font-family: 'Playfair Display', serif;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -148,6 +152,10 @@ nav a {
 
 .nav-drop-text {
      color:#414345;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 
