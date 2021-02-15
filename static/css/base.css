@@ -74,19 +74,12 @@ html {
   width: 100%;
 }
 
-li {
-    display: inline-block;
-   
-}
+
 
 .align-right {
     display: inline;
 }
 
-
-.footer {
-    background-color: #000000;  
-}
 
 .background-black {
     background-color: #000000;
@@ -112,7 +105,15 @@ li {
     color: #ffffff;
 }
 
+.footer-list {
+    display: flex;
+    flex-direction: column;
+}
 
+.footer {
+    background-color: #000000;  
+    padding-top: 12px;
+}
 
 /*---- font colors ---- */
 
@@ -135,6 +136,7 @@ li {
 .black {
     color: #000000;
 }
+
 
 /* ------------------------------- bootstrap toasts */
 
