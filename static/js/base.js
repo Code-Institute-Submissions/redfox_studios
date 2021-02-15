@@ -1,24 +1,14 @@
-$(document).ready(function(){
-$(".test1").click(function(){
-  $(".show1").hide();
-    });
-$(".test2").click(function(){
-  $(".show1").show();
+
+ $(function () {
+        $("#show").click(function () {
+            $(".old-about").slideToggle("slow");
+        });
     });
 
-$(".test3").click(function(){
-  $(".show2").hide();
-    });
-$(".test4").click(function(){
-  $(".show2").show();
-    });
 
-$(".test5").click(function(){
-  $(".show3").hide();
+     $(function () {
+        $("#hide").click(function () {
+            $(".new-about").slideToggle("slow");
+        });
     });
-$(".test6").click(function(){
-  $(".show3").show();
-    });
-});
-
 
