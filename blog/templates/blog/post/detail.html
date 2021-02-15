@@ -7,14 +7,20 @@
 <div class="container">
 <hr class="featurette-divider">
 <div class="row">
-    <div class="col-6">
+    <div class="col-12">
           <h1>{{ post.title }}</h1>
    
   <p class="date">
     Published {{ post.publish }} by {{ post.author }}
   </p>
   {{ post.body|linebreaks }}
+</div>
+</div>
 
+<hr class="featurette-divider">
+
+<div class="row">
+    <div class="col-6">
   <h2>Similar posts</h2>
   {% for post in similar_posts %}
     <p>
@@ -23,8 +29,6 @@
   {% empty %}
     There are no similar posts yet.
   {% endfor %}
-
- 
 
   {% with comments.count as total_comments %}
     <h2>
@@ -46,6 +50,9 @@
     <h2>Your comment has been added.</h2>
   {% else %}
 </div>
+
+
+
   <div class="col-6">
     <h2>Add a new comment</h2>
     <form method="post">
@@ -58,12 +65,15 @@
 </div>
 </div>
 
+<br> 
+</div>
+
+
 <div class="row">
-    <div class="col-4">
-        <a href="{% url 'blog:post_list' %}" class="btn btn-outline-black rounded-0 mt-5">Back to Blog</a>
+    <div class="col-12 text-center">
+        <a href="{% url 'blog:post_list' %}" class="btn btn-outline-black rounded-0 mt-5 bg-info">Back to Blog</a>
     </div>
 </div>
 
-</div>
-
+<br>
 {% endblock %}
