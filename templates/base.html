@@ -40,7 +40,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-fixed sticky-top text-center" aria-label="navbar">
     <div class="container-fluid nav-extended">
-      <button class="navbar-toggler collapsed white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars fa-lg"></i>
       </button>
 
@@ -50,7 +50,7 @@
 
        <li class="list-inline-item text-right align-right">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'show_bag' %}">
-                            <div class="text-center white">
+                            <div class="text-center black">
                                 
                                 <p class="my-0"><i class="fas fa-shopping-bag fa-lg"></i>
                                     {% if grand_total %}
@@ -65,7 +65,7 @@
 
       
 
-
+   
       <div class="navbar-collapse justify-content-md-center collapse" id="navbarsExample08">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -80,12 +80,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'products' %}" tabindex="-1" aria-disabled="false">Shop</a>
           </li>
-      
+     
 
     <!-- Dropdown -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center white">
+                            <div class="text-center black">
                                 <p class="my-0"><i class="fas fa-user fa-lg"></i> My Account</p>
                             </div>
                         </a>
