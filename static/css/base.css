@@ -111,9 +111,9 @@ html {
 }
 
 .footer {
-    background-color: #ffffff;  
+    background-color:#434343;  
     padding-top: 12px;
-    color: #000000;
+    color: #ffffff;
 }
 
 /*---- font colors ---- */
@@ -136,6 +136,18 @@ html {
 
 .black {
     color: #000000;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+nav a {
+    color:#414345;
+}
+
+.nav-drop-text {
+     color:#414345;
 }
 
 
@@ -389,5 +401,5 @@ html {
 }
 
 .fox-home {
-    margin-top: 20%;
+    margin-top: 15%;
 }
