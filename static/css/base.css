@@ -79,6 +79,24 @@ li {
     color: #ffffff;
 }
 
+.background-black-white {
+    background-image: linear-gradient(to right, #000000, #E6DADA)
+}
+
+.background-black-red {
+    background-image: linear-gradient(to right, #000000, #e74c3c);
+    color: #ffffff;
+}
+
+.background-black-blue {
+    background-image: linear-gradient(to right, #000000, #004e92);
+    color: #ffffff;
+}
+
+.background-black-green {
+    background-image: linear-gradient(to right, #000000, #0f9b0f);
+    color: #ffffff;
+}
 
 
 
@@ -351,4 +369,8 @@ li {
 
 .new-about {
     display: none;
+}
+
+.fox-home {
+    margin-top: 20%;
 }
