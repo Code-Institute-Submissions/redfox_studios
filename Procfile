@@ -1,1 +1,1 @@
-web: gunicorn redfox_studios.wsgi:application
+web: gunicorn redfox-studios.wsgi:application
