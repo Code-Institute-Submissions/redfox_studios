@@ -4,7 +4,8 @@ html {
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 14pt;
 }
 
 .center {
