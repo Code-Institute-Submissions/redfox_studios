@@ -1,0 +1,1 @@
+web: gunicorn redfox_studios.wsgi:application
