@@ -419,3 +419,12 @@ textarea {
 	    background-image: url("media/sketch.jpg");
    }
 }
+
+/* 2340x1080 pixels at 476ppi */
+@media only screen 
+    and (device-width: 375px) 
+    and (device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        body {
+	    background-image: url("media/sketch.jpg");
+   }}
