@@ -21,7 +21,12 @@ body {
 
 /* --- background image for banner    url("/media/elephant.jpg") no-repeat center center fixed. */
 
-
+.hero {
+    background: url('/media/elephant.jpg') no-repeat center center fixed;
+    background-size: 100% 100%;
+    height: calc(100vh - 164px);
+    background-size: cover;
+}
 
 
 
@@ -394,82 +399,10 @@ textarea {
 
 
 
-/*. Media queries --*/
 
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
 
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* iPhone 4 ----------- */
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-    #hero {
-        width: 100%;
-        height: auto;
-    }
-}
