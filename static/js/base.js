@@ -40,3 +40,8 @@
 
 
 
+$(function () {
+        $(".footer-toggle").click(function () {
+            $(".footer-content").slideToggle("slow");
+        });
+    });

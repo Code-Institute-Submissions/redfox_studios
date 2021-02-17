@@ -121,6 +121,10 @@ body {
     color: #ffffff;
 }
 
+.footer-content {
+    display: none;
+}
+
 /*---- font colors ---- */
 
 .red {
