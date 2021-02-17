@@ -1,6 +1,5 @@
 html {
     height: 100vh;
-    min-height: 100%;
     width: 100%;
 }
 
@@ -18,13 +17,61 @@ body {
   width: 90%;
   padding-top: 6px;
 }
+
+
 /* --- background image for banner    url("/media/elephant.jpg") no-repeat center center fixed. */
 
+
+#hero {
+  width: 100%;
+  height: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+#hero {
+  width: 100%;
+  height: auto;
+  position: center;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    #hero {
+  width: 100%;
+  height: auto;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #hero {
+  width: 100%;
+  height: auto;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #hero {
+  width: 100%;
+  height: auto;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #hero {
+  width: 100%;
+  height: auto;
+}
+}
 
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image:  url("/media/sketch.jpg"); 
+  background:  url("/media/sketch.jpg"); 
   /* Set a specific height */
   height: 50%;
   -webkit-background-size: cover; /* safari may need this */
@@ -93,7 +140,9 @@ body {
   width: 100%;
 }
 
-
+ul {
+    list-style-type: none;
+}
 
 .align-right {
     display: inline;
@@ -402,32 +451,3 @@ textarea {
 }
 
 
-
-/*---- Media queries. ----*/
-
-@media (max-width: 480px) {
-    body {
-        background-image: url("media/sketch.jpg");
-    }
-}
-
-@media (min-width: 481px) and (max-width: 1024px) {
-    body {
-        background-image: url("media/sketch.jpg");
-    }
-}
-
-@media (min-width: 1025px) {
-    body {
-	    background-image: url("media/sketch.jpg");
-   }
-}
-
-/* 2340x1080 pixels at 476ppi */
-@media only screen 
-    and (device-width: 375px) 
-    and (device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 3) {
-        body {
-	    background-image: url("media/sketch.jpg");
-   }}

@@ -1,100 +1,77 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-
-{% endblock %}
-
+{% extends "base.html" %} 
+{% load static %} 
+{% block page_header %} 
+{% endblock %} 
 {% block content %}
+
 <div>
-
-
-
-<div class="p-4 p-md-5 mb-4 text-white rounded background-black-red">
-    <div class="col-md-6 px-0">
-      <h1 class="display-4 fst-italic">Welcome to Red Fox Studios</h1>
-      <p class="lead my-3">An indepedent studio, bringing art to your door.</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold"></a></p>
+    <div class="p-4 p-md-5 mb-4 text-white rounded background-black-red">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 fst-italic">Welcome to Red Fox Studios</h1>
+            <p class="lead my-3">An indepedent studio, bringing art to your door.</p>
+            <p class="lead mb-0"><a href="#" class="text-white fw-bold"></a></p>
+        </div>
     </div>
-  </div>
-<br >
+    <br />
 
-<div class="container">
-
-<div class="row  text-center">
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="card shadow-sm">
-            <img src="{% get_media_prefix %}shop.jpg" height="200" width="290" class="center">
-            <div class="card-body">
-             
-             
-                <div class="btn-group">
-                  <a class="button btn btn-outline-success" href="{% url 'products' %}">Shop</a>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow-sm">
+                    <img src="{% get_media_prefix %}shop.jpg" height="200" width="290" class="center" alt="art shop front" />
+                    <div class="card-body">
+                        <div class="btn-group">
+                            <a class="button btn btn-outline-success" href="{% url 'products' %}">Shop</a>
+                        </div>
+                    </div>
                 </div>
-            
             </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="card shadow-sm">
-            <img src="{% get_media_prefix %}learn.jpg" height="200" width="290" class="center">
-            <div class="card-body">
-           
-             
-                <div class="btn-group">
-                    <a class="button btn btn-outline-primary" href="{% url 'blog:post_list' %}">Blog</a>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow-sm">
+                    <img src="{% get_media_prefix %}learn.jpg" height="200" width="290" class="center" alt="digital art" />
+                    <div class="card-body">
+                        <div class="btn-group">
+                            <a class="button btn btn-outline-primary" href="{% url 'blog:post_list' %}">Blog</a>
+                        </div>
+                    </div>
                 </div>
-             
             </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4">
-          <div class="card shadow-sm">
-            <img src="{% get_media_prefix %}explore.jpg" height="200" width="290" class="center">
-            <div class="card-body">
-           
-              
-                <div class="btn-group">
-                  <a class="button btn btn-outline-success" href="{% url 'about' %}">Studio</a>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="card shadow-sm">
+                    <img src="{% get_media_prefix %}explore.jpg" height="200" width="290" class="center" alt="artist" />
+                    <div class="card-body">
+                        <div class="btn-group">
+                            <a class="button btn btn-outline-success" href="{% url 'about' %}">Studio</a>
+                        </div>
+                    </div>
                 </div>
-           
             </div>
-          </div>
         </div>
-      </div>
 
-  
-<hr class="featurette-divider">
-<!-- faq -->
-<br >
+        <hr class="featurette-divider" />
+        <!-- faq -->
+        <br />
 
-<div class="row featurette text-center">
-      <div class="col-md-5 ">
-        <h1 class="featurette-heading text-center">FAQ</h1>
-       <hr class="featurette-divider">
-        <h3 class="underline">Who we are?</h3>
-        <p class="text-left">We are a growing team who are wanting to share our in-house artists creations with the world.</p>
-        <h3 class="underline">Why Red Fox?</h3>
-        <p class="text-left">In our early market selling days, we were greeted each morning by a friendly red-fox (pictured). Even though we don't come across 
-            him/her anymore, we wanted to remember our humble beginnings by taking up the name.</p>
-        <h3 class="underline">What we offer?</h3>
-        <p class="text-left">Affordable, high quality artwork for a range of purposes.  Our artworks look good in the office, home, 
-        wherever you think.</p>
-      </div>
-      <div class="col-md-7 ">
-          <img src ="{% get_media_prefix %}redfox.jpg" class="fox-home" height="350" width ="300">
-      </div>
-</div>
-<hr class="featurette-divider">
+        <div class="row featurette text-center">
+            <div class="col-md-5">
+                <h1 class="featurette-heading text-center">FAQ</h1>
+                <hr class="featurette-divider" />
+                <h3 class="underline">Who we are?</h3>
+                <p class="text-left">We are a growing team who are wanting to share our in-house artists creations with the world.</p>
+                <h3 class="underline">Why Red Fox?</h3>
+                <p class="text-left">
+                    In our early market selling days, we were greeted each morning by a friendly red-fox (pictured). Even though we don't come across him/her anymore, we wanted to remember our humble beginnings by taking up the name.
+                </p>
+                <h3 class="underline">What we offer?</h3>
+                <p class="text-left">Affordable, high quality artwork for a range of purposes. Our artworks look good in the office, home, wherever you think.</p>
+            </div>
+            <div class="col-md-7">
+                <img src="{% get_media_prefix %}redfox.jpg" class="fox-home" height="350" width="300" alt="red fox on street" />
+            </div>
+        </div>
+        <hr class="featurette-divider" />
+    </div>
 </div>
 
-
-
-
-
-
-  </div>
-
-
-<br>
+<br />
 {% endblock %}

@@ -1,170 +1,150 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block title %}About our Studio{% endblock %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
-
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}
+About our Studio
+{% endblock %} 
+{% block page_header %} 
+{% endblock %} 
 {% block content %}
 
-  <section class="py-5 text-center background-black-blue" id="studio">
+<section class="py-5 text-center background-black-blue" id="studio">
     <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Our Studio</h1>
-        <p class="lead ">Established in 2008, our studio has changed to meet our ever-growing customer base.</p>
-        <p>
-          <button class="btn btn-primary my-2" id="show">Our old studio</button>
-          <button class="btn btn-secondary my-2" id="hide">Our new studio</button>
-        </p>
-      </div>
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Our Studio</h1>
+            <p class="lead">Established in 2008, our studio has changed to meet our ever-growing customer base.</p>
+            <p>
+                <button class="btn btn-primary my-2" id="show">Our old studio</button>
+                <button class="btn btn-secondary my-2" id="hide">Our new studio</button>
+            </p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <br class="line-break">
+<br class="line-break" />
 
 <!-- Old Studio content -->
 <div class="container old-about">
-    <hr class="featurette-divider">
-<div class="row featurette text-center">
-      <div class="col-md-6">
-        <h2 class="featurette-heading">Our beginning</h2>
-        <p class="lead">Selling at local markets, we developed a loyal and ever growing customer base.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="{% get_media_prefix %}market.jpg" alt="Market Stall" height="300" width="300">
-      </div>
-</div>
-<hr class="featurette-divider">
+    <hr class="featurette-divider" />
+    <div class="row featurette text-center">
+        <div class="col-md-6">
+            <h2 class="featurette-heading">Our beginning</h2>
+            <p class="lead">Selling at local markets, we developed a loyal and ever growing customer base.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% get_media_prefix %}market.jpg" alt="Market Stall" height="300" width="300" />
+        </div>
+    </div>
+    <hr class="featurette-divider" />
 
-
-<div class="row featurette text-center">
-      <div class="col-md-6 order-md-2">
-        <h2 class="featurette-heading">It was a few years onwards we moved into our first studio.</h2>
-        <p class="lead">Giving up on our day job, we took the plunge to be full time artists.</p>
-      </div>
-      <div class="col-md-6 order-md-1">
-        <img src="{% get_media_prefix %}brushes.jpg" alt="Market Stall" height="300" width="300">
-      </div>
+    <div class="row featurette text-center">
+        <div class="col-md-6 order-md-2">
+            <h2 class="featurette-heading">It was a few years onwards we moved into our first studio.</h2>
+            <p class="lead">Giving up on our day job, we took the plunge to be full time artists.</p>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <img src="{% get_media_prefix %}brushes.jpg" alt="Paint brushes" height="300" width="300" />
+        </div>
     </div>
 
-<hr class="featurette-divider">
+    <hr class="featurette-divider" />
 
-<div class="row featurette text-center">
-      <div class="col-md-6">
-        <h2 class="featurette-heading">We even held our first event at this location.</h2>
-        <p class="lead">But space was becoming a bit of an issue with more artworks being produced and we needed to grow.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="{% get_media_prefix %}first_gallery.jpg" alt="Market Stall" height="300" width="300">
-      </div>
+    <div class="row featurette text-center">
+        <div class="col-md-6">
+            <h2 class="featurette-heading">We even held our first event at this location.</h2>
+            <p class="lead">But space was becoming a bit of an issue with more artworks being produced and we needed to grow.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% get_media_prefix %}first_gallery.jpg" alt="Gallery" height="300" width="300" />
+        </div>
     </div>
-<hr class="featurette-divider">
+    <hr class="featurette-divider" />
 
     <div class="text-center">
-          <a href="#studio" class="btn btn-primary my-2" id="show1">Close</a>
+        <a href="#studio" class="btn btn-primary my-2" id="show1">Close</a>
     </div>
 
-<hr class="featurette-divider">
-
+    <hr class="featurette-divider" />
 </div>
 <!-- New Studio content -->
 
-<div class= "container new-about">
-
-<hr class="featurette-divider">
-<div class="row featurette text-center">
-      <div class="col-md-6 order-md-2">
-        <h2 class="featurette-heading">With new technologies, we began to experiment with digital artworks.</h2>
-        <p class="lead">This has formed the basis of our studio.</p>
-      </div>
-      <div class="col-md-6 order-md-1">
-        <img src="{% get_media_prefix %}digitalart.jpg" alt="Market Stall" height="300" width="300">
-      </div>
-    </div>
-    
-    <hr class="featurette-divider">
-  <div class="row featurette bg-light text-center">
-      <div class="col-md-6">
-        <h2 class="featurette-heading">Then in 2019, we made the move to be a exclusive online.</h2>
-        <p class="lead">This way we could create affordable artworks for a wider range of clients.</p>
-      </div>
-      <div class="col-md-6">
-        <img src="{% get_media_prefix %}egallery.jpg" alt="Market Stall" height="300" width="300">
-      </div>
-
-    <hr>
-
-
-
+<div class="container new-about">
+    <hr class="featurette-divider" />
+    <div class="row featurette text-center">
+        <div class="col-md-6 order-md-2">
+            <h2 class="featurette-heading">With new technologies, we began to experiment with digital artworks.</h2>
+            <p class="lead">This has formed the basis of our studio.</p>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <img src="{% get_media_prefix %}digitalart.jpg" alt="Digital artwork" height="300" width="300" />
+        </div>
     </div>
 
+    <hr class="featurette-divider" />
+    <div class="row featurette bg-light text-center">
+        <div class="col-md-6">
+            <h2 class="featurette-heading">Then in 2019, we made the move to be a exclusive online.</h2>
+            <p class="lead">This way we could create affordable artworks for a wider range of clients.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% get_media_prefix %}egallery.jpg" alt="Gallery" height="300" width="300" />
+        </div>
 
-<hr class="featurette-divider">
-<div class="row featurette text-center">
-      <div class="col-md-6 order-md-2">
-        <h2 class="featurette-heading">What's next?</h2>
-        <p class="lead">We wish to keep on expanding, growing and creating the artworks our customers love.</p>
-      </div>
-      <div class="col-md-6 order-md-1">
-        <img src="{% get_media_prefix %}mickey.jpg" alt="Market Stall" height="300" width="300">
-      </div>
+        <hr />
     </div>
 
-<hr class="featurette-divider">
+    <hr class="featurette-divider" />
+    <div class="row featurette text-center">
+        <div class="col-md-6 order-md-2">
+            <h2 class="featurette-heading">What's next?</h2>
+            <p class="lead">We wish to keep on expanding, growing and creating the artworks our customers love.</p>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <img src="{% get_media_prefix %}mickey.jpg" alt="Mickey Mouse old to new" height="300" width="300" />
+        </div>
+    </div>
+
+    <hr class="featurette-divider" />
 
     <div class="text-center">
-           <a href="#studio" class="btn btn-secondary my-2" id="hide2">Close</a>
+        <a href="#studio" class="btn btn-secondary my-2" id="hide2">Close</a>
     </div>
 
-<hr class="featurette-divider">
-
+    <hr class="featurette-divider" />
 </div>
 
 <!--- Events -->
 <div class="container">
+    <h1 class="text-center featurette-heading">Events</h1>
+    <hr class="featurette-divider" />
 
-  <h1 class="text-center featurette-heading">Events</h1>
-  <hr class="featurette-divider">
-
-  <div class="row mb-2">
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-primary">Studio</strong>
-          <h3 class="mb-0">Monthly events</h3>
-          <div class="mb-1 text-muted">2nd Saturday of the month</div>
-          <p class="card-text mb-auto">PLEASE NOTE: We are currently unable to host regular in-studio events.  Please check back for updates.</p>
-        
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Studio</strong>
+                    <h3 class="mb-0">Monthly events</h3>
+                    <div class="mb-1 text-muted">2nd Saturday of the month</div>
+                    <p class="card-text mb-auto">PLEASE NOTE: We are currently unable to host regular in-studio events. Please check back for updates.</p>
+                </div>
+                <div class="d-none d-lg-block">
+                    <img src="{% get_media_prefix %}event.jpg" alt="Event" height="225" width="225" />
+                </div>
+            </div>
         </div>
-        <div class="d-none d-lg-block">
-          <img src="{% get_media_prefix %}event.jpg" alt="Market Stall" height="225" width="225">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success">Online</strong>
+                    <h3 class="mb-0">Zoom events</h3>
+                    <div class="mb-1 text-muted">TBD</div>
+                    <p class="mb-auto">Due to current circumstances, we will be hosting Zoom tours. Please check back for updates on events.</p>
+                </div>
+                <div class="d-none d-lg-block">
+                    <img src="{% get_media_prefix %}zoomevent.jpg" alt="Zoom meeting" height="225" width="225" />
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success">Online</strong>
-          <h3 class="mb-0">Zoom events</h3>
-          <div class="mb-1 text-muted">TBD</div>
-          <p class="mb-auto">Due to current circumstances, we will be hosting Zoom tours.  Please check back for updates on events.</p>
-        </div>
-        <div class="d-none d-lg-block">
-          <img src="{% get_media_prefix %}zoomevent.jpg" alt="Market Stall" height="225" width="225">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 </div>
 
 {% endblock %}
-
