@@ -23,9 +23,13 @@ body {
 
 .hero {
     background: url('/media/elephant.jpg') no-repeat center center fixed;
-    background-size: 100% 100%;
-    height: calc(100vh - 164px);
+    background-size: cover;
+    /* height: calc(100vh - 164px); */
     background-attachment: scroll;
+    height: 100%;
+    padding-top: 270px;
+    padding-bottom: 350px;
+    display: inline-block;
 }
 
 
