@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    width: 99%;
+    width: auto;
 }
 
 body {
@@ -19,23 +19,19 @@ body {
 /* --- background image for banner    url("/media/elephant.jpg") no-repeat center center fixed. */
 
 .background-image {
-    background: url("/media/banner.jpg") no-repeat center center fixed;
+    background: url("/media/santa_grinch.jpg") no-repeat center fixed;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-size: cover;
     display: inline-block;
 }
 
 .hero-image {
-    background-image: url("/media/sketch.jpg");
+    background-image: url("/media/santa_grinch.jpg");
     width: 100%;
     height: 100%;
-    padding-top: 270px;
-    padding-bottom: 350px;
     background-size: cover;
     display: inline-block;
-    color: #fff;
-    text-shadow: 2px 2px #000;
 }
 
 .allauth-form-inner-content a {
