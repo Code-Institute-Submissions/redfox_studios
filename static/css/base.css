@@ -1,11 +1,12 @@
 html {
     height: 100%;
-    width: 100%;
+    width: 99%;
 }
 
 body {
     font-family: 'Playfair Display', sans-serif;
     font-size: 14pt;
+    width: 100%;
 }
 
 .center {
@@ -315,18 +316,6 @@ nav a {
 }
 
 
-/* ------------- Button styles index page -----*/
-
-.carousel-control-prev {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
 
 
 
@@ -384,31 +373,8 @@ nav a {
 	color: #17a2b8; /* text-info */
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
 
-    .header-container {
-        padding-top: 164px;
-    }
-}
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
 
 
 
