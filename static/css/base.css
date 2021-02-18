@@ -26,10 +26,8 @@ body {
     background-size: cover;
     /* height: calc(100vh - 164px); */
     background-attachment: scroll;
-    height: 100%;
-    padding-top: 270px;
-    padding-bottom: 350px;
-    display: inline-block;
+    height: calc(100vh - 164px);
+    width: 100%;
 }
 
 
