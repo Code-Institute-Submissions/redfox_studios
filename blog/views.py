@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post, Comment
 from django.core.paginator import Paginator, EmptyPage,\
                                              PageNotAnInteger
 from django.views.generic import ListView
 from .forms import CommentForm
 from taggit.models import Tag
 from django.db.models import Count
+from .models import Post
+
 
 # Create your views here.
 
@@ -25,7 +26,7 @@ def post_list(request, tag_slug=None):
         tag = get_object_or_404(Tag, slug=tag_slug)
         object_list = object_list.filter(tags__in=[tag])
 
-    paginator = Paginator(object_list, 3) # 3 posts in each page
+    paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -35,7 +36,7 @@ def post_list(request, tag_slug=None):
     except EmptyPage:
         # If page is out of range deliver last page of results
         posts = paginator.page(paginator.num_pages)
-    
+
     context = {'page': page, 'posts': posts, 'tag': tag}
 
     return render(request, 'blog/post/list.html', context)

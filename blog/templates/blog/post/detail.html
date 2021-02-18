@@ -4,16 +4,19 @@
 {{ post.title }}
 {% endblock %} 
 {% block content %}
-<div class="container">
+<div class="container plain-font">
     <hr class="featurette-divider" />
     <div class="row">
-        <div class="col-12">
+        <div class="col-lg-8 col-md-8 col-sm-12">
             <h1>{{ post.title }}</h1>
 
             <p class="date">
-                Published {{ post.publish }} by {{ post.author }}
+                Published {{ post.publish }} by <strong class="underline">{{ post.author }}</strong>
             </p>
             {{ post.body|linebreaks }}
+        </div>
+        <div class= "col-lg-4 col-md-4 col-sm-12">
+            <img src="{{ post.images.url }}" target="blank" alt="placeholder" width="200" height="200" />
         </div>
     </div>
 

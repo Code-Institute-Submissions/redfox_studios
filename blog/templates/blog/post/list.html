@@ -13,7 +13,7 @@
     </div>
 </div>
 
-<div class="container text-center">
+<div class="container text-center plain-font">
     {% if tag %}
     <h2 class="featurette-heading">Posts tagged with "{{ tag.name }}"</h2>
     {% endif %}
@@ -34,7 +34,7 @@
                     </h2>
                     <p class="lead card-text">{{ post.body|truncatewords:30 }}</p>
                     <p class="card-text date">
-                        Published {{ post.publish }} by {{ post.author }}
+                        Published {{ post.publish }} by <strong class="underline">{{ post.author }}</strong>
                     </p>
                     <!-- Tags. -->
                     <p class="tags">
