@@ -2,8 +2,21 @@ Readme file contents
 
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/page_display.png)
 
+Live Site:  https://redfox-studios.herokuapp.com/
 
-### Access for educational purposes
+GitHub Repository: https://github.com/samc85/redfox_studios
+
+## Access for educational purposes
+
+For ease of access, visitors to the site can access its different elements via the following ways:
+To make any purchases (as a guest, user, superuser):
+
+* Fill in in personal details when prompted.
+
+* Credit Card:  4242 4242 4242 4242 
+* Exp: 42/42
+* CVC:  424
+* Zip: 42424
 
 
 
@@ -173,30 +186,32 @@ The database has 6 models across all its apps.  Each is set out below and relati
 included below:
 
 Model:  Blog_Post
-
+The blog post model sets the values for posting a blog.
 
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/blogpost_model.png)
 
 Model: Blog_Comment
+The blog comment model sets the values for leaving a blog comment.
 
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment_model.png)
 
 Model: Checkout
+The checkout model sets the values for checking out. 
 
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/checkout_model.png)
 
 Model: Checkout Line order
-
+The checkout line order model sets the values for the users checkout details.
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/checkoutorder_model.png)
 
 Model: Profile 
 
-
+The profile model sets the values for a user profile.
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/profile_model.png)
 
 
 Database Relationship Model
-
+The DR model shows how each model is related.  
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/model_relationship.png)
 
 
