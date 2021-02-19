@@ -49,13 +49,13 @@ Examples of the site on different screens can be seen below:
 
 
 
-![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/phone1.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/phone.png)
 
 
-![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/tablet.png)
+![Tablet display](https://github.com/samc85/redfox_studios/blob/master/media/tablet.png)
 
 
-![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/desktop1.png)
+![Desktop display](https://github.com/samc85/redfox_studios/blob/master/media/desktop1.png)
 
 
 ### Responsiveness Test
@@ -76,7 +76,9 @@ Javascript
 
 Python
 
-Testing against User Stories
+
+
+### Testing against User Stories
 
 
 

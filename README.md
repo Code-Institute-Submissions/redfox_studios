@@ -296,6 +296,8 @@ Techsini
 
 Please refer to the TESTING.md file for information on site testing procedures.
 
+    TESTING.md 
+
 
 ## Deployment
 
@@ -325,7 +327,7 @@ To clone the repository the following options can be followed:
 
 *	Paste the following into the terminal 
 
-        `git clone https://github.com/samc85/redfox_studios`
+        git clone https://github.com/samc85/redfox_studios
 
 *	Go to the repository for the site and click the ‘Code’ button and ‘Download Zip’ button.
 Setting Environment Variables
@@ -336,13 +338,13 @@ Environment variables can be set up through two methods, as follows:
 Add .env to .gitignore
 Add the following to .env
 
-        `import os`
+        import os
 
-        `os.environ["DEVELOPMENT"] = "True"`
-        `os.environ["SECRET_KEY"] = "<Your Key>"`
-        `os.environ["STRIPE_PUBLIC_KEY"] = "<Your Key>"`
-        `os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"`
-        `os.environ["STRIPE_WH_SECRET"] = "<Your Key>`
+        os.environ["DEVELOPMENT"] = "True"
+        os.environ["SECRET_KEY"] = "<Your Key>"
+        os.environ["STRIPE_PUBLIC_KEY"] = "<Your Key>"
+        os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"
+        os.environ["STRIPE_WH_SECRET"] = "<Your Key>
 
 2.	Go to the Gitpod home page and click the icon in top right corner.
 Click on the dropdown arrow and ‘settings.’
@@ -350,7 +352,7 @@ Environment variables can be added by:
 
 e.g: 
 
-        `KEY: STRIPE_PUBLIC_KEY  Value: <value>`
+        KEY: STRIPE_PUBLIC_KEY  Value: <value>
 
 It is vital that all env variables are consistent with the 'settings.py' file.
 
@@ -359,7 +361,7 @@ It is vital that all env variables are consistent with the 'settings.py' file.
 * Install requirements from requirements.txt file
 paste the following command into the terminal:
 
-        `pip3 install -r requirements.txt`
+        pip3 install -r requirements.txt
 
 ### Migrations
 
@@ -367,15 +369,15 @@ Migrate the models to create a database
 
 Paste the following commands into the terminal:
 
-    `python3 manage.py makemigrations`
-    `python3 manage.py migrate`
+    python3 manage.py makemigrations
+    python3 manage.py migrate
 
 ### Superusers
 
 1. Create a superuser (user with admin rights)
 paste the following command into the terminal:
 
-        `python3 manage.py createsuperuser`
+        python3 manage.py createsuperuser
 	
     enter an e-mail, username and password for the superuser.
 
@@ -383,7 +385,7 @@ paste the following command into the terminal:
 
     Paste the following command into the terminal:
 
-        `python3 manage.py runserver`
+        python3 manage.py runserver
 
 3.  Log into Django admin
 
@@ -396,24 +398,24 @@ paste the following command into the terminal:
 	
     Paste the following command into the terminal:
 	
-        `pip freeze > requirements.txt`
+        pip freeze > requirements.txt
 
 2.	Create a Procfile:
 	
     Create a Procfile in the root directory
 	add the following code into it:
 	
-        `web: gunicorn ecosio.wsgi:application`
+        web: gunicorn ecosio.wsgi:application
 
 3.	Push the code to GitHub:
 
     Paste the following commands into the terminal:
 
-        `git add -A`
+        git add -A
     
-        `git commit -m "<your commit note>"`
-
-        `git push`
+        git commit -m "<your commit note>"
+        
+        git push
 
 4.	Create a new app on Heroku:
 
@@ -431,58 +433,58 @@ paste the following command into the terminal:
 
     ### Key	Value:
 
-        `AWS_ACCESS_KEY_ID	< your AWS access key ID >`
+        AWS_ACCESS_KEY_ID	< your AWS access key ID >
 
-        `AWS_SECRET_ACCESS_KEY	< your AWS secret access key >`
+        AWS_SECRET_ACCESS_KEY	< your AWS secret access key >
 
-        `DATABASE_URL	< your postgres database URL >`
+        DATABASE_URL	< your postgres database URL >
 
-        `SECRET_KEY	< your secret key >`
+        SECRET_KEY	< your secret key >
 
-        `STRIPE_PUBLIC_KEY	< your stripe public key >`
+        STRIPE_PUBLIC_KEY	< your stripe public key >
 
-        `STRIPE_SECRET_KEY	< your stripe secret key >`
+        STRIPE_SECRET_KEY	< your stripe secret key >
 
-        `STRIPE_WH_SECRET	< your stripe webhook key >`
+        STRIPE_WH_SECRET	< your stripe webhook key >
     
-        `USE_AWS	True`
+        USE_AWS	True
 
 7.	Set up new database:
 
     In settings.py:
     
-        `import dj_database_url`
+        import dj_database_url
     
     Comment out DATABASES (temporarily, do not commit/push this code to GitHub until mentioned in later steps)
     
     Add the following code:
 
-        `DATABASES = {
-        'default': dj_database_url.parse("<your Postrgres database URL>")
-            }`
+        DATABASES = {
+        default': dj_database_url.parse("<your Postrgres database URL>")
+            }
     
 8.	Migrate the models to Postgres database:
 
     Paste the following commands into the terminal:
 
-        `python3 manage.py makemigrations`
+        python3 manage.py makemigrations
 
-        `python3 manage.py migrate`
+        python3 manage.py migrate
 
 9.	If using data fixutres, follow the procedure to load the data fixtures below.  Otherwise data fixtures
 can be added manually in the django admin portal.
     
     Paste the following commands into the terminal:
 
-        e.g, `python3 manage.py loaddata categories`
-         `python3 manage.py loaddata products`
+        e.g,    python3 manage.py loaddata categories
+                python3 manage.py loaddata products
 
 
 10.	Create a superuser (user with admin rights)
 
     Paste the following command into the terminal:
     
-        `python3 manage.py createsuperuser`
+        python3 manage.py createsuperuser
 
     Then enter an e-mail, username and password for the superuser
 
@@ -496,12 +498,11 @@ can be added manually in the django admin portal.
     
     then add the following code:
 
-        `ALLOWED_HOSTS = ['<your Heroku app URL>', 'localhost]`
+        ALLOWED_HOSTS = ['<your Heroku app URL>', 'localhost]
 
 13.	Push the code to GitHub
 
     (follow previous add, commit and push steps for github)
-
 
 14.	Set up automatic deployment to Heroku (optional)
 
@@ -530,6 +531,20 @@ you will need to create a media/ file in order to host all media.
 
 
 ## Credits 
+
+The following resources can be accredited for reasons stated below:
+
+### Project set up, Bag, Checkout and Profile apps
+
+
+### Blog app
+
+
+### General resources:
+
+
+
+
 
 ## Acknowledgements 
 
