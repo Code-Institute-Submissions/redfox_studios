@@ -108,6 +108,8 @@
                     </tr>
                 </table>
             </div>
+            </div>
+        </div>
             {% else %}
 
             <!-- Help choosing quiz  -->
@@ -219,7 +221,6 @@
                     </div>
                 </form>
                 <br />
-            </div>
             <div id="answer" class="container text-center">Your result will appear here!</div>
             <br />
         </div>
@@ -236,9 +237,10 @@
         </div>
         {% endif %}
     </div>
-</div>
 
 {% endblock %} 
+
+
 {% block postloadjs %}
 <script src="{% static 'bag/js/bag.js' %}"></script>
 {{ block.super }} 

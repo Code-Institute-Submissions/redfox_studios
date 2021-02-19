@@ -238,11 +238,10 @@ Techsini
 
 ## Testing
 
-
+Please refer to the TESTING.md file for information on site testing procedures.
 
 
 ## Deployment
-
 
 The page was created using Gitpod.  Git was used for version control and Github was used to host the repository.  Heroku is the final hosting platform for the project with AWS S3 hosting its static and media files.
 
@@ -268,13 +267,15 @@ You will also need to have registered with the following services:
 
 To clone the repository the following options can be followed:
 
-1.	paste the following into the terminal 
+*	Paste the following into the terminal 
 
 `git clone https://github.com/samc85/redfox_studios`
 
-2.	Go to the repository for the site and click the ‘Code’ button and ‘Download Zip’ button.
+*	Go to the repository for the site and click the ‘Code’ button and ‘Download Zip’ button.
 Setting Environment Variables
+
 Environment variables can be set up through two methods, as follows:
+
 1.	Create .env file
 Add .env to .gitignore
 Add the following to .env
@@ -290,78 +291,132 @@ Add the following to .env
 2.	Go to the Gitpod home page and click the icon in top right corner.
 Click on the dropdown arrow and ‘settings.’
 Environment variables can be added by:
-e.g,
-KEY: STRIPE_PUBLIC_KEY  Value: <value>
-It is vital that all env variables are consistent with the settings.py file.
-Requirements 
-3.	Install requirements from requirements.txt file
-•	paste the following command into the terminal:
-o	pip3 install -r requirements.txt
-Migrations
-Migrate the models to create a database
-•	paste the following commands into the terminal:
-o	python3 manage.py makemigrations
-o	python3 manage.py migrate
-Superusers
-6.	Create a superuser (user with admin rights)
-•	paste the following command into the terminal:
-o	python3 manage.py createsuperuser
-•	enter an e-mail, username and password for the superuser
-7.	Run the web app
-•	paste the following command into the terminal:
-o	python3 manage.py runserver
-8.	Log into Django admin
-•	after running the web app, add /admin at the end of the URL and log in with the superuser credentials from the previous step
 
-Heroku Deployment
-1.	Create a requirements.txt file
-•	paste the following command into the terminal:
-o	pip freeze > requirements.txt
-2.	Create a Procfile
-•	create a Procfile in the root directory
-•	add the following code into it:
-o	web: gunicorn ecosio.wsgi:application
-3.	Push the code to GitHub
-•	paste the following commands into the terminal:
-o	git add .
-o	git commit -m "<your commit note>"
-o	git push
-4.	Create a new app on Heroku
-•	create a new app (click on 'New' > 'Create new app')
-•	give it a unique name
-•	set region closest to you
-5.	Set Heroku Postgres
-•	go to 'Resources' tab
-•	search for 'Heroku Postgres'
-•	select the 'Hobby Dev' free plan
-6.	Set config variables in Heroku
-Key	Value
-AWS_ACCESS_KEY_ID	< your AWS access key ID >
-AWS_SECRET_ACCESS_KEY	< your AWS secret access key >
-DATABASE_URL	< your postgres database URL >
-SECRET_KEY	< your secret key >
-STRIPE_PUBLIC_KEY	< your stripe public key >
-STRIPE_SECRET_KEY	< your stripe secret key >
-STRIPE_WH_SECRET	< your stripe webhook key >
-USE_AWS	True
-7.	Set up new database
-•	in settings.py:
-o	import dj_database_url
-o	comment out DATABASES (temporarily, do not commit/push this code to GitHub until instructed so)
-o	add the following code:
-DATABASES = {
+e.g, `KEY: STRIPE_PUBLIC_KEY  Value: <value>`
+
+It is vital that all env variables are consistent with the 'settings.py' file.
+
+### Requirements 
+
+* Install requirements from requirements.txt file
+paste the following command into the terminal:
+
+`pip3 install -r requirements.txt`
+
+### Migrations
+
+Migrate the models to create a database
+
+Paste the following commands into the terminal:
+
+1. `python3 manage.py makemigrations`
+2. `python3 manage.py migrate`
+
+### Superusers
+
+1. Create a superuser (user with admin rights)
+paste the following command into the terminal:
+
+    `python3 manage.py createsuperuser`
+	
+    enter an e-mail, username and password for the superuser.
+
+2. Run the web app
+
+    Paste the following command into the terminal:
+
+    `python3 manage.py runserver`
+
+3.  Log into Django admin
+
+    After running the web app, add `/admin` at the end of the URL and log in with the superuser credentials from the previous step
+
+
+### Heroku Deployment
+
+1.	Create a requirements.txt file:
+	
+    Paste the following command into the terminal:
+	
+    `pip freeze > requirements.txt`
+2.	Create a Procfile:
+	
+    Create a Procfile in the root directory
+	add the following code into it:
+	
+    `web: gunicorn ecosio.wsgi:application`
+
+3.	Push the code to GitHub:
+
+    Paste the following commands into the terminal:
+
+    `git add -A`
+    
+    `git commit -m "<your commit note>"`
+
+    `git push`
+
+4.	Create a new app on Heroku:
+
+    Create a new app (click on 'New' > 'Create new app')
+    Give it a unique name
+    Set region closest to you
+
+5.	Set Heroku Postgres:
+
+    Go to 'Resources' tab
+    Search for 'Heroku Postgres'
+    Select the 'Hobby Dev' free plan
+
+6.	Set config variables in Heroku:
+
+    ### Key	Value:
+
+    `AWS_ACCESS_KEY_ID	< your AWS access key ID >`
+
+    `AWS_SECRET_ACCESS_KEY	< your AWS secret access key >`
+
+    `DATABASE_URL	< your postgres database URL >`
+
+    `SECRET_KEY	< your secret key >`
+
+    `STRIPE_PUBLIC_KEY	< your stripe public key >`
+
+    `STRIPE_SECRET_KEY	< your stripe secret key >`
+
+    `STRIPE_WH_SECRET	< your stripe webhook key >`
+    
+    `USE_AWS	True`
+
+7.	Set up new database:
+
+    In settings.py:
+    
+    `import dj_database_url`
+    `Comment out DATABASES (temporarily, do not commit/push this code to GitHub until instructed so)`
+    
+    Add the following code:
+
+    `DATABASES = {
         'default': dj_database_url.parse("<your Postrgres database URL>")
-    }
-8.	Migrate the models to Postgres database
-•	paste the following commands into the terminal:
-o	python3 manage.py makemigrations
-o	python3 manage.py migrate
-9.	Load the data fixtures in this exact order
-•	paste the following commands into the terminal:
-o	python3 manage.py loaddata categories
-o	python3 manage.py loaddata brands
-o	python3 manage.py loaddata products
-o	python3 manage.py loaddata blogs
+    }`
+    
+8.	Migrate the models to Postgres database:
+
+    Paste the following commands into the terminal:
+
+    `python3 manage.py makemigrations`
+
+    `python3 manage.py migrate`
+
+9.	If using data fixutres, follow the procedure to load the data fixtures below.  Otherwise data fixtures
+can be added manually in the django admin portal.
+    
+    Paste the following commands into the terminal:
+
+    e.g, `python3 manage.py loaddata categories`
+
+
 10.	Create a superuser (user with admin rights)
 •	paste the following command into the terminal:
 o	python3 manage.py createsuperuser
