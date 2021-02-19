@@ -41,7 +41,7 @@ $(document).ready(
             answerbox1.innerHTML = "Something more modern?  Browse our pop culture art.";
         }
         if(landscapescore == maxscore && popscore == maxscore && animalscore == maxscore) {
-                answerbox1.innerHTML = "Try again!";
+                answerbox1.innerHTML = "Try again!  Your answer is a bit hard to decipher";
                 }
     })
 );

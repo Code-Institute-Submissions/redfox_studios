@@ -3,7 +3,7 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static '/bag/css/bag.css' %}">
+    <link rel="stylesheet" href="{% static 'bag/css/bag.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -251,11 +251,11 @@
                 {% endif %}
             </div>
         </div>
-    </div>
+   
 {% endblock %}
 
 {% block postloadjs %}
-<script src="{% static '/bag/js/bag.js' %}"></script>
+<script src="{% static 'bag/js/bag.js' %}"></script>
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
