@@ -1,5 +1,6 @@
 {% extends "base.html" %} 
 {% load static %} 
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}" />
 {% endblock %} 
@@ -23,7 +24,7 @@
                     <hr class="featurette-divider" />
                     <div class="row quiz1">
                         <div class="col-12">
-                            <h2>What type of holiday do you prefer?</h2>
+                            <h2>Choose which option appeals to you most.</h2>
                         </div>
                     </div>
                     <br />
@@ -33,19 +34,16 @@
                     </label>
                     <br />
                     <label>
-                        <input type="radio" name="q1" value="lan2" class="input-quiz" />
-                        Country-side.
+                        <input type="radio" name="q1" value="an1" class="input-quiz" />
+                        Wildlife.
                     </label>
                     <br />
                     <label>
-                        <input type="radio" name="q1" value="pop3" class="input-quiz" />
+                        <input type="radio" name="q1" value="lan2" class="input-quiz" />
                         City break.
                     </label>
                     <br />
-                    <label>
-                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
-                        Different to my usual.
-                    </label>
+                    
 
                     <!-- Question 2 -->
                     <br />
@@ -56,18 +54,15 @@
                         </div>
                     </div>
                     <br />
+                    
+                    <br />
                     <label>
                         <input type="radio" name="q2" value="an1" class="input-quiz" />
-                        Patterns and tones.
+                        Patterns and colours..
                     </label>
                     <br />
                     <label>
-                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
-                        High contrast.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                        <input type="radio" name="q2" value="an1" class="input-quiz" />
                         Natural, primary colours.
                     </label>
                     <br />
@@ -86,10 +81,7 @@
                         </div>
                     </div>
                     <br />
-                    <label>
-                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
-                        Your home or private collection.
-                    </label>
+                    
                     <br />
                     <label>
                         <input type="radio" name="q3" value="lan2" class="input-quiz" />
@@ -98,7 +90,7 @@
                     <br />
                     <label>
                         <input type="radio" name="q3" value="pop3" class="input-quiz" />
-                        Communal areas.
+                        Somewhere everyone can see.
                     </label>
                     <br />
                     <label>
@@ -128,8 +120,12 @@
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
         </div>
+
+        <br>
 {% endblock %}
 
 {% block postloadjs %} 
-<script src="{% static 'quiz/js/quiz.js' %}"></script>
+{{ block.super }}
+<script src="{% static '/quiz/js/quiz.js' %}"></script>
 {% endblock %}
+
