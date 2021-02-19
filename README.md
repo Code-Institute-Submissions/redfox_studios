@@ -73,6 +73,15 @@ The Business aims to grow its expanding customer base by making use of its websi
 
 Wireframes are mostly true to final site and can be access here:
 
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/wireframe.png)
+
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/products_wf.png)
+
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/blog_wf.png)
+
 ### Inspiration 
 
 Numerous websites were researched to take design inspiration, including the author’s previous Milestone Projects.  The intent was to make the site look clean, with a clear focus on each pages’ main focus, such as the artworks.  The heavy use of ‘white’ instead of different colours or shades was used to emphasise the content and also to resemble the look of the studio in person, where clutter is kept to a minimum.  
