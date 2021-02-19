@@ -96,7 +96,8 @@ div {
      display: flex;
      flex-direction: column;
 }
- #footer {
+ 
+.footer {
      background-color:#434343;
      padding-top: 12px;
      color: #ffffff;
