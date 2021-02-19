@@ -3,7 +3,7 @@
 
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'bag/css/bag.css' %}">
+    <link rel="stylesheet" href="{% static '/bag/css/bag.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -122,70 +122,106 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead mb-5">Your bag is empty.</p>
 
-                      <!-- help choosing -->
+                      <!-- Help choosing quiz  -->
 
                       <div class="container text-center">
-                        <hr class="featurette-divider" />
-                        <h3>How about some help choosing?</h3>
+                    
+                        <h2 class="red"><strong>Your bag is empty, how about some help choosing?</strong></h2>
                         <hr class="featurette-divider" />
               
-                <div class="row featurette"></div>
-
-                <div class="row featurette">
-                    <div class="col-lg-6">
-                        <form id="quiz">
+                    <form id="quiz">
                             <!-- Question 1 -->
                             <br />
-                            <h2>What gets you the most excited?</h2>
+                             <hr class="featurette-divider" />
+                            <div class="row quiz1">
+                                <div class="col-12">
+                                    <h2 class="text-center">What type of holiday do you prefer?</h2>
+                                </div>
+                            </div>
+                            <br />
                             <label>
-                                <input type="radio" name="q1" value="ad1" class="input-quiz" />
-                                Exploring, thrill-seeking and the great outdoors
+                                <input type="radio" name="q1" value="an1" class="input-quiz" />
+                                Safari.
                             </label>
                             <br />
                             <label>
-                                <input type="radio" name="q1" value="com2" class="input-quiz" />
-                                A week off the grid, with comforts
+                                <input type="radio" name="q1" value="lan2" class="input-quiz" />
+                                Country-side.
+                            </label>
+                            <br/>
+                            <label>
+                                <input type="radio" name="q1" value="pop3" class="input-quiz" />
+                                City break.
                             </label>
                             <br />
-                          
-                            <br />
-
+                            <label>
+                                <input type="radio" name="q2" value="an1" class="input-quiz" />
+                                Different to my usual.
+                            </label>
+                    
+                            
+                    
                             <!-- Question 2 -->
-                            <h2>What is your ideal day</h2>
+                            <br />
+                             <hr class="featurette-divider" />
+                            <div class="row quiz2">
+                                <div class="col-12">
+                                    <h3 class="text-center">What colour scheme do you prefer?</h3>
+                                </div>
+                            </div>
+                            <br />
                             <label>
-                                <input type="radio" name="q2" value="ad1" class="input-quiz" />
-                                Get up early and be active early
+                                <input type="radio" name="q2" value="an1" class="input-quiz" />
+                                Patterns and tones.
                             </label>
                             <br />
                             <label>
-                                <input type="radio" name="q2" value="com2" class="input-quiz" />
-                                Get up at my own pace, no rush to go anywhere
+                                <input type="radio" name="q2" value="an1" class="input-quiz" />
+                                High contrast.
                             </label>
                             <br />
-                          
-                        </form>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form>
+                            <label>
+                                <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                                Natural, primary colours.
+                            </label>
+                            <br />
+                            <label>
+                                <input type="radio" name="q2" value="pop3" class="input-quiz" />
+                                Bright and bold.
+                            </label>
+                            <br />
+                       
                             <!-- Question 3 -->
                             <br />
-                            <h2>Where is your ideal destination?</h2>
+                             <hr class="featurette-divider" />
+                            <div class="row quiz3">
+                                <div class="col-12">
+                                    <h2 class="text-center">Where do you want to hang your picture?</h2>
+                                </div>
+                            </div>
+                            <br />
                             <label>
-                                <input type="radio" name="q3" value="ad1" class="input-quiz" />
-                                Lakes, mountains and trails
+                                <input type="radio" name="q3" value="an1" class="input-quiz" />
+                                Your home or private collection.
                             </label>
                             <br />
                             <label>
-                                <input type="radio" name="q3" value="com2" class="input-quiz" />
-                                Inside with a fireplace with picture perfect views
+                                <input type="radio" name="q3" value="an1" class="input-quiz" />
+                                Somewhere where I can look and think.
                             </label>
                             <br />
-                        
+                            <label>
+                                <input type="radio" name="q3" value="lan2" class="input-quiz" />
+                                Communal areas.
+                            </label>
                             <br />
-
+                            <label>
+                                <input type="radio" name="q3" value="pop3" class="input-quiz" />
+                                I don't mind... just needs to be an attention grabber!
+                            </label>
+                            <br />
+                
                             <!-- Quiz results section -->
                             <div class="text-align">
                                 <p class="quiz-submit" id="submit-quiz" onclick="score()">Submit your answers</p>
@@ -193,13 +229,14 @@
                             </div>
                         </form>
                         <br />
-                        <div id="answer">Your result will appear here!</div>
                     </div>
+                    <div id="answer" class="container text-center">Your result will appear here!</div>
+                    <br />
                 </div>
             <hr class="featurette-divider" />
             <!-- End quiz section -->
 
-                      </div>
+                      
                         
 
 
@@ -218,7 +255,7 @@
 {% endblock %}
 
 {% block postloadjs %}
-<script src="{% static 'bag/js/bag.js' %}"></script>
+<script src="{% static '/bag/js/bag.js' %}"></script>
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 

@@ -12,13 +12,13 @@ $(document).ready(
             // if the radio is checked..
             if (choices[i].checked) {
                 // add 1 to that choice's score
-                if (choices[i].value == "ad1") {
+                if (choices[i].value == "an1") {
                     animalscore = animalscore + 1;
                 }
-                if (choices[i].value == "com2") {
+                if (choices[i].value == "lan2") {
                     landscapescore = landscapescore + 1;
                 }
-                if (choices[i].value == "coun3") {
+                if (choices[i].value == "pop3") {
                     popscore = popscore + 1;
                 }
                 
@@ -30,18 +30,18 @@ $(document).ready(
         let answerbox1 = document.getElementById("answer");
         if (animalscore == maxscore) {
             // If user chooses the first choice the most, this outcome will be displayed.
-            answerbox1.innerHTML = "You are an adventure seeker... why not look at our Adventure package";
+            answerbox1.innerHTML = "Animals are your thing... why not try some of our animal portraits?";
         }
         if (landscapescore == maxscore) {
             // If user chooses the second choice the most, this outcome will be displayed.
-            answerbox1.innerHTML = "Looking for a relaxing getaway? Enjoy a week away in our Comfort package";
+            answerbox1.innerHTML = "Nature lover... take a look at some of our landscapes.";
         }
         if (popscore == maxscore) {
             // If user chooses the third choice the most, this outcome will be displayed.
-            answerbox1.innerHTML = "You seek the Country life... enjoying nature, local towns... why not explore our Country packages";
+            answerbox1.innerHTML = "Something more modern?  Browse our pop culture art.";
         }
         if(landscapescore == maxscore && popscore == maxscore && animalscore == maxscore) {
-                answerbox1.innerHTML = "Fill in the above for your choice!";
+                answerbox1.innerHTML = "Try again!";
                 }
     })
 );
