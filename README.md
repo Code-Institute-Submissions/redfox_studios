@@ -6,6 +6,7 @@ Readme file contents
 ### Access for educational purposes
 
 
+
 ### UX Design
 
 ### Purpose
@@ -172,6 +173,31 @@ The database has 6 models across all its apps.  Each is set out below and relati
 included below:
 
 Model:  Blog_Post
+
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/blogpost_model.png)
+
+Model: Blog_Comment
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment_model.png)
+
+Model: Checkout
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/checkout_model.png)
+
+Model: Checkout Line order
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/checkoutorder_model.png)
+
+Model: Profile 
+
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/profile_model.png)
+
+
+Database Relationship Model
+
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/model_relationship.png)
 
 
 
