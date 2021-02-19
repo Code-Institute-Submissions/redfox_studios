@@ -1,0 +1,135 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}" />
+{% endblock %} 
+{% block page_header %} 
+{% endblock %} 
+{% block content %}
+
+<div class="container text-left">
+                <h2 class="red text-center"><strong>Finding it difficult to decide.. take our quiz for some help.</strong></h2>
+                <hr class="featurette-divider" />
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <i class="fas fa-poll-h fa-7x"></i>
+                    </div>
+                </div>
+
+                <form id="quiz">
+                    <!-- Question 1 -->
+
+                    <hr class="featurette-divider" />
+                    <div class="row quiz1">
+                        <div class="col-12">
+                            <h2>What type of holiday do you prefer?</h2>
+                        </div>
+                    </div>
+                    <br />
+                    <label>
+                        <input type="radio" name="q1" value="an1" class="input-quiz" />
+                        Safari.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q1" value="lan2" class="input-quiz" />
+                        Country-side.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q1" value="pop3" class="input-quiz" />
+                        City break.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
+                        Different to my usual.
+                    </label>
+
+                    <!-- Question 2 -->
+                    <br />
+                    <hr class="featurette-divider" />
+                    <div class="row quiz2">
+                        <div class="col-12">
+                            <h3>What colour scheme do you prefer?</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="an1" class="input-quiz" />
+                        Patterns and tones.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                        High contrast.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                        Natural, primary colours.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
+                        Bright and bold.
+                    </label>
+                    <br />
+
+                    <!-- Question 3 -->
+                    <br />
+                    <hr class="featurette-divider" />
+                    <div class="row quiz3">
+                        <div class="col-12">
+                            <h3>Where do you want to hang your picture?</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
+                        Your home or private collection.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
+                        Somewhere where I can look and think.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
+                        Communal areas.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
+                        I don't mind... just needs to be an attention grabber!
+                    </label>
+                    <br />
+
+                    <!-- Quiz results section -->
+                    <div class="text-align text-center">
+                        <p class="quiz-submit btn" id="submit-quiz" onclick="score()">Submit</p>
+                        <p class="quiz-submit btn" id="reset" onclick="resetAnswer()">Reset</p>
+                    </div>
+                </form>
+                <br />
+            <div id="answer" class="container text-center">Your result will appear here!</div>
+            <br />
+        </div>
+        <hr class="featurette-divider" />
+        <!-- End quiz section -->
+
+        <div class="container text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+        </div>
+{% endblock %}
+
+{% block postloadjs %} 
+<script src="{% static 'quiz/js/quiz.js' %}"></script>
+{% endblock %}

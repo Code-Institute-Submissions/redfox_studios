@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'blog',
     'taggit',
     'about',
+    'quiz',
 
     # Other
     'crispy_forms',

@@ -1,7 +1,6 @@
 {% extends "base.html" %} 
 {% load static %} 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'bag/css/bag.css' %}" />
+{% block extra_css %} 
 {% endblock %} 
 {% block page_header %} 
 {% endblock %} 
@@ -14,8 +13,7 @@
     </div>
 </div>
 
-<div class="overlay"></div>
-<div class="container mb-2">
+<div class="container">
     <div class="row">
         <div class="col">
             <hr />
@@ -23,7 +21,9 @@
             <hr />
         </div>
     </div>
+</div>
 
+<div class="container">
     <div class="row">
         <div class="col">
             {% if bag_items %}
@@ -32,7 +32,6 @@
                     <thead class="text-black">
                         <tr>
                             <th scope="col-sm-12">Product Info</th>
-                            <th scope="col-sm-12"></th>
                             <th scope="col-sm-12">Price</th>
                             <th scope="col-sm-12">Qty</th>
                         </tr>
@@ -108,142 +107,35 @@
                     </tr>
                 </table>
             </div>
-            </div>
         </div>
-            {% else %}
-
-            <!-- Help choosing quiz  -->
-
-            <div class="container text-left">
-                <h2 class="red text-center"><strong>Your bag is empty, how about some help choosing?</strong></h2>
-                <hr class="featurette-divider" />
-
-                <div class="row text-center">
-                    <div class="col-12">
-                        <i class="fas fa-poll-h fa-7x"></i>
-                    </div>
-                </div>
-
-                <form id="quiz">
-                    <!-- Question 1 -->
-
-                    <hr class="featurette-divider" />
-                    <div class="row quiz1">
-                        <div class="col-12">
-                            <h2>What type of holiday do you prefer?</h2>
-                        </div>
-                    </div>
-                    <br />
-                    <label>
-                        <input type="radio" name="q1" value="an1" class="input-quiz" />
-                        Safari.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q1" value="lan2" class="input-quiz" />
-                        Country-side.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q1" value="pop3" class="input-quiz" />
-                        City break.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
-                        Different to my usual.
-                    </label>
-
-                    <!-- Question 2 -->
-                    <br />
-                    <hr class="featurette-divider" />
-                    <div class="row quiz2">
-                        <div class="col-12">
-                            <h3>What colour scheme do you prefer?</h3>
-                        </div>
-                    </div>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="an1" class="input-quiz" />
-                        Patterns and tones.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
-                        High contrast.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
-                        Natural, primary colours.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
-                        Bright and bold.
-                    </label>
-                    <br />
-
-                    <!-- Question 3 -->
-                    <br />
-                    <hr class="featurette-divider" />
-                    <div class="row quiz3">
-                        <div class="col-12">
-                            <h3>Where do you want to hang your picture?</h3>
-                        </div>
-                    </div>
-                    <br />
-                    <label>
-                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
-                        Your home or private collection.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
-                        Somewhere where I can look and think.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
-                        Communal areas.
-                    </label>
-                    <br />
-                    <label>
-                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
-                        I don't mind... just needs to be an attention grabber!
-                    </label>
-                    <br />
-
-                    <!-- Quiz results section -->
-                    <div class="text-align text-center">
-                        <p class="quiz-submit btn" id="submit-quiz" onclick="score()">Submit</p>
-                        <p class="quiz-submit btn" id="reset" onclick="resetAnswer()">Reset</p>
-                    </div>
-                </form>
-                <br />
-            <div id="answer" class="container text-center">Your result will appear here!</div>
-            <br />
-        </div>
-        <hr class="featurette-divider" />
-        <!-- End quiz section -->
-
-        <div class="container text-center">
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-        </div>
-        {% endif %}
     </div>
 
+    {% else %}
+
+    <h2 class="red text-center"><strong>Your bag is empty, how about some help choosing?</strong></h2>
+     <a href="{% url 'quiz' %}">Take our Quiz</a>
+                <hr class="featurette-divider" />
+    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase">Keep Shopping</span>
+    </a>
+
+    {% endif %}
+</div>
+</div>
+</div>
+<br> 
 {% endblock %} 
+{% block postloadjs %} 
+{{ block.super }}
+<script type="text/javascript">
+    $(".btt-link").click(function (e) {
+        window.scrollTo(0, 0);
+    });
+</script>
 
-
-{% block postloadjs %}
-<script src="{% static 'bag/js/bag.js' %}"></script>
-{{ block.super }} 
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
@@ -257,12 +149,14 @@
     $(".remove-item").click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr("id").split("remove_")[1];
+        var size = $(this).data("product_size");
         var url = `/bag/remove/${itemId}/`;
-        var data = { csrfmiddlewaretoken: csrfToken };
+        var data = { csrfmiddlewaretoken: csrfToken, product_size: size };
 
         $.post(url, data).done(function () {
             location.reload();
         });
     });
 </script>
+
 {% endblock %}
