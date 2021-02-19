@@ -1,5 +1,8 @@
 Readme file contents
 
+![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/page_display.png)
+
+
 ### Access for educational purposes
 
 
@@ -23,44 +26,43 @@ User stories are broken down into the following categories:
 
 #### As a first time user I want to:
 
-1. Navigate all areas of a site with ease so that I can 
-2. Understand what the site purpose is
-3. Clearly recognise the different make up of the site 
-4. Be able to find a contact for the site owners
-5. Be visually accessible
-6. Be accessible on a range of devices
-7. Read, search and comment on blog posts
+1. Navigate all areas of a site with ease so that I can find what I am looking for.
+2. Understand what the site purpose is so that I can make informed choices.
+3. Clearly recognise the different make up of the site so that I can recall its key features for future visits.
+4. Be able to find a contact for the site owners so that I can make any customer queries.
+5. Be visually accessible so that the site is easy to navigate and view.
+6. Be accessible on a range of devices so that I can access wherever I am.
+7. Read, search and comment on blog posts so that I can be part of an online community.
 
 
 
 #### As a casual shopper I want to:
 
-1. Browse and search for products by name and price range
-2. Look at a product in more detail without being unsure on what I am purchasing
-3. Make a purchase securely and safely
-4. Receive confirmation of my order
-5. Have my order delivered 
-6. Be made clearly aware of my delivery fees
-7. Read, search and comment on blog posts
+1. browse and search for products by name and price range so that I can make informed purchases.
+2. look at a product in more detail without being unsure on what I am purchasing so that I feel confident as a shopper.
+3. make a purchase securely and safely so that I do not fear any security reasons.
+4. receive confirmation of my order so that I have peace of mind for my order.
+5. be made clearly aware of my delivery fees so that I know exactly what my expenses are.
+6. read, comment and be aware of similar blog posts so that I can read up on a topic easily.
 
 #### As a site member I want to:
 
-1. I want to be able to 
-2. Register and subsequently log into the site
-3. View my profile and order history
-4. Have my details pre-saved in order to make future purchases more streamlined
-5. Be able to log into the site with ease
-6. Not have being a member impact upon any of the other user stories
-7. Read, search and comment on blog posts
+
+1. register and subsequently log into the site so that I can have my personal details and order history saved.
+2. view my profile and order history so that I can keep track of my site usage.
+3. have my details pre-saved in order to make future purchases more streamlined so that I can save time.
+4. be able to log into the site with ease so that I do not face barriers in using the site.
+5. not have being a member impact upon any of the other user stories so that I am not negatively impacted.
+
 
 #### As an admin user I want to:
 
-1. I want to be able to 
-2. Login securely
-3. Add, edit and delete products in the store
-4. Fulfil all other user stories without being obstructed
-5. Create blog posts to update users on content
-6. Read, search and comment on blog posts
+1. add 'data' to the site in the form of products and blogs so that I can reach my customers.
+2. be able to log in with extra features so that I can access what I need.
+3. be able to Add, edit and delete products in the store so that I can keep products up to date and relevant.
+4. fulfil all other user stories without being obstructed by being an admin so that I can experience the site as a customer.
+5. create blog posts to update users on content so that I can stay connected to my customer base.
+6. read, search and comment on blog posts so that I can interact further with my customers.
 
 
 ### Business goals
@@ -157,7 +159,11 @@ Future features to be added include:
 ## Information Architecture 
 ### Database
 
-The database has 6 models across all its apps.  Each is set out in the tables below.
+The database has 6 models across all its apps.  Each is set out below and relational model is
+included below:
+
+Model:  Blog_Post
+
 
 
 ## Technologies used
@@ -269,7 +275,7 @@ To clone the repository the following options can be followed:
 
 *	Paste the following into the terminal 
 
-`git clone https://github.com/samc85/redfox_studios`
+        `git clone https://github.com/samc85/redfox_studios`
 
 *	Go to the repository for the site and click the ‘Code’ button and ‘Download Zip’ button.
 Setting Environment Variables
@@ -280,19 +286,21 @@ Environment variables can be set up through two methods, as follows:
 Add .env to .gitignore
 Add the following to .env
 
-`import os`
+        `import os`
 
-`os.environ["DEVELOPMENT"] = "True"`
-`os.environ["SECRET_KEY"] = "<Your Key>"`
-`os.environ["STRIPE_PUBLIC_KEY"] = "<Your Key>"`
-`os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"`
-`os.environ["STRIPE_WH_SECRET"] = "<Your Key>`
+        `os.environ["DEVELOPMENT"] = "True"`
+        `os.environ["SECRET_KEY"] = "<Your Key>"`
+        `os.environ["STRIPE_PUBLIC_KEY"] = "<Your Key>"`
+        `os.environ["STRIPE_SECRET_KEY"] = "<Your Key>"`
+        `os.environ["STRIPE_WH_SECRET"] = "<Your Key>`
 
 2.	Go to the Gitpod home page and click the icon in top right corner.
 Click on the dropdown arrow and ‘settings.’
 Environment variables can be added by:
 
-e.g, `KEY: STRIPE_PUBLIC_KEY  Value: <value>`
+e.g: 
+
+        `KEY: STRIPE_PUBLIC_KEY  Value: <value>`
 
 It is vital that all env variables are consistent with the 'settings.py' file.
 
@@ -301,7 +309,7 @@ It is vital that all env variables are consistent with the 'settings.py' file.
 * Install requirements from requirements.txt file
 paste the following command into the terminal:
 
-`pip3 install -r requirements.txt`
+        `pip3 install -r requirements.txt`
 
 ### Migrations
 
@@ -309,15 +317,15 @@ Migrate the models to create a database
 
 Paste the following commands into the terminal:
 
-1. `python3 manage.py makemigrations`
-2. `python3 manage.py migrate`
+    `python3 manage.py makemigrations`
+    `python3 manage.py migrate`
 
 ### Superusers
 
 1. Create a superuser (user with admin rights)
 paste the following command into the terminal:
 
-    `python3 manage.py createsuperuser`
+        `python3 manage.py createsuperuser`
 	
     enter an e-mail, username and password for the superuser.
 
@@ -325,7 +333,7 @@ paste the following command into the terminal:
 
     Paste the following command into the terminal:
 
-    `python3 manage.py runserver`
+        `python3 manage.py runserver`
 
 3.  Log into Django admin
 
@@ -338,23 +346,24 @@ paste the following command into the terminal:
 	
     Paste the following command into the terminal:
 	
-    `pip freeze > requirements.txt`
+        `pip freeze > requirements.txt`
+
 2.	Create a Procfile:
 	
     Create a Procfile in the root directory
 	add the following code into it:
 	
-    `web: gunicorn ecosio.wsgi:application`
+        `web: gunicorn ecosio.wsgi:application`
 
 3.	Push the code to GitHub:
 
     Paste the following commands into the terminal:
 
-    `git add -A`
+        `git add -A`
     
-    `git commit -m "<your commit note>"`
+        `git commit -m "<your commit note>"`
 
-    `git push`
+        `git push`
 
 4.	Create a new app on Heroku:
 
@@ -372,79 +381,106 @@ paste the following command into the terminal:
 
     ### Key	Value:
 
-    `AWS_ACCESS_KEY_ID	< your AWS access key ID >`
+        `AWS_ACCESS_KEY_ID	< your AWS access key ID >`
 
-    `AWS_SECRET_ACCESS_KEY	< your AWS secret access key >`
+        `AWS_SECRET_ACCESS_KEY	< your AWS secret access key >`
 
-    `DATABASE_URL	< your postgres database URL >`
+        `DATABASE_URL	< your postgres database URL >`
 
-    `SECRET_KEY	< your secret key >`
+        `SECRET_KEY	< your secret key >`
 
-    `STRIPE_PUBLIC_KEY	< your stripe public key >`
+        `STRIPE_PUBLIC_KEY	< your stripe public key >`
 
-    `STRIPE_SECRET_KEY	< your stripe secret key >`
+        `STRIPE_SECRET_KEY	< your stripe secret key >`
 
-    `STRIPE_WH_SECRET	< your stripe webhook key >`
+        `STRIPE_WH_SECRET	< your stripe webhook key >`
     
-    `USE_AWS	True`
+        `USE_AWS	True`
 
 7.	Set up new database:
 
     In settings.py:
     
-    `import dj_database_url`
-    `Comment out DATABASES (temporarily, do not commit/push this code to GitHub until instructed so)`
+        `import dj_database_url`
+    
+    Comment out DATABASES (temporarily, do not commit/push this code to GitHub until mentioned in later steps)
     
     Add the following code:
 
-    `DATABASES = {
+        `DATABASES = {
         'default': dj_database_url.parse("<your Postrgres database URL>")
-    }`
+            }`
     
 8.	Migrate the models to Postgres database:
 
     Paste the following commands into the terminal:
 
-    `python3 manage.py makemigrations`
+        `python3 manage.py makemigrations`
 
-    `python3 manage.py migrate`
+        `python3 manage.py migrate`
 
 9.	If using data fixutres, follow the procedure to load the data fixtures below.  Otherwise data fixtures
 can be added manually in the django admin portal.
     
     Paste the following commands into the terminal:
 
-    e.g, `python3 manage.py loaddata categories`
+        e.g, `python3 manage.py loaddata categories`
+         `python3 manage.py loaddata products`
 
 
 10.	Create a superuser (user with admin rights)
-•	paste the following command into the terminal:
-o	python3 manage.py createsuperuser
-•	enter an e-mail, username and password for the superuser
+
+    Paste the following command into the terminal:
+    
+        `python3 manage.py createsuperuser`
+
+    Then enter an e-mail, username and password for the superuser
+
+
 11.	Correct the settings.py database from step 7.
-•	uncomment the DATABASES
-•	remove the code added in step 7.
-12.	Add the hostname of Heroku app to allowed EMAIL_HOST_USER
-•	in settings.py:
-o	add the following code:
-ALLOWED_HOSTS = ['<your Heroku app URL>', 'localhost]
+    
+    * uncomment the DATABASES
+    * remove the code added in step 7.
+
+12.	Add the hostname of Heroku app to allowed EMAIL_HOST_USER in settings.py:
+    
+    then add the following code:
+
+        `ALLOWED_HOSTS = ['<your Heroku app URL>', 'localhost]`
+
 13.	Push the code to GitHub
-•	paste the following commands into the terminal:
-o	git add .
-o	git commit -m "<your commit note>"
-o	git push
+
+    (follow previous add, commit and push steps for github)
+
+
 14.	Set up automatic deployment to Heroku (optional)
-•	in Heroku go to 'Deploy' > 'Deployment method' > 'Connect to GitHub'
-•	search for your repository and click on it
-•	go to 'Automatic Deployment' > click 'Enable Automatic Deploys'
+
+    * in Heroku go to 'Deploy' > 'Deployment method' > 'Connect to GitHub'
+    * search for your repository and click on it (if done correctly, your git profile should appear to make search easier)
+    * go to 'Automatic Deployment' > click 'Enable Automatic Deploys'
+
+
 15.	Test automatic deployment
-•	your code should be automatically deployed to Heroku after pushing your code
-Hosting Files with AWS
-In order to host static files and images with AWS, you will need to create an AWS account. Additionally, you have to create:
-•	an AWS S3 Bucket
-•	a Bucket Policy
-•	a Group
-•	an Access Policy
-•	a User
-It is a lengthy process but you can learn more about Amazon Simple Storage Service here. After that, you will need to connect Django to S3.
+
+    Your code should be automatically deployed to Heroku after pushing your code.
+
+    Hosting Files with AWS:
+
+    In order to host static files and images with AWS, you will need to create an AWS account. Additionally, you have to create:
+    * an AWS S3 Bucket
+    * a Bucket Policy
+    * a Group
+    * an Access Policy
+    * an User
+
+Please refer to AWS documentation for walkthrough of the process.  
+
+Whilst your static/ file should upload automatically after automatic deployment is enabled
+you will need to create a media/ file in order to host all media.
+
+
+## Credits 
+
+## Acknowledgements 
+
 
