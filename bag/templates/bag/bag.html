@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'bag/css/bag.css' %}">
+{% endblock %}
+
 {% block page_header %}
-   
 {% endblock %}
 
 {% block content %}
@@ -119,12 +123,94 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
+
+                      <!-- help choosing -->
+
+                      <div class="container text-center">
+                        <hr class="featurette-divider" />
+                        <h3>How about some help choosing?</h3>
+                        <hr class="featurette-divider" />
+              
+                <div class="row featurette"></div>
+
+                <div class="row featurette">
+                    <div class="col-lg-6">
+                        <form id="quiz">
+                            <!-- Question 1 -->
+                            <br />
+                            <h2>What gets you the most excited?</h2>
+                            <label>
+                                <input type="radio" name="q1" value="ad1" class="input-quiz" />
+                                Exploring, thrill-seeking and the great outdoors
+                            </label>
+                            <br />
+                            <label>
+                                <input type="radio" name="q1" value="com2" class="input-quiz" />
+                                A week off the grid, with comforts
+                            </label>
+                            <br />
+                          
+                            <br />
+
+                            <!-- Question 2 -->
+                            <h2>What is your ideal day</h2>
+                            <label>
+                                <input type="radio" name="q2" value="ad1" class="input-quiz" />
+                                Get up early and be active early
+                            </label>
+                            <br />
+                            <label>
+                                <input type="radio" name="q2" value="com2" class="input-quiz" />
+                                Get up at my own pace, no rush to go anywhere
+                            </label>
+                            <br />
+                          
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form>
+                            <!-- Question 3 -->
+                            <br />
+                            <h2>Where is your ideal destination?</h2>
+                            <label>
+                                <input type="radio" name="q3" value="ad1" class="input-quiz" />
+                                Lakes, mountains and trails
+                            </label>
+                            <br />
+                            <label>
+                                <input type="radio" name="q3" value="com2" class="input-quiz" />
+                                Inside with a fireplace with picture perfect views
+                            </label>
+                            <br />
+                        
+                            <br />
+
+                            <!-- Quiz results section -->
+                            <div class="text-align">
+                                <p class="quiz-submit" id="submit-quiz" onclick="score()">Submit your answers</p>
+                                <p class="quiz-submit" id="reset" onclick="resetAnswer()">Reset</p>
+                            </div>
+                        </form>
+                        <br />
+                        <div id="answer">Your result will appear here!</div>
+                    </div>
+                </div>
+            <hr class="featurette-divider" />
+            <!-- End quiz section -->
+
+                      </div>
+                        
+
+
+                <div class="container text-center">
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
+                </div>
                 {% endif %}
             </div>
         </div>
@@ -132,6 +218,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+<script src="{% static 'bag/js/bag.js' %}"></script>
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 
@@ -154,5 +241,6 @@
              location.reload();
          });
     })
+    
 </script>
 {% endblock %}
