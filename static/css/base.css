@@ -64,6 +64,7 @@ html {
 }
  ul {
      list-style-type: none;
+     padding-left: 3px;
 }
  .align-right {
      display: inline;
