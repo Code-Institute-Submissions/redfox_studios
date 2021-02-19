@@ -1,283 +1,266 @@
-{% extends "base.html" %}
-{% load static %}
-
-
+{% extends "base.html" %} 
+{% load static %} 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'bag/css/bag.css' %}">
-{% endblock %}
-
-{% block page_header %}
-{% endblock %}
-
+<link rel="stylesheet" href="{% static 'bag/css/bag.css' %}" />
+{% endblock %} 
+{% block page_header %} 
+{% endblock %} 
 {% block content %}
 
 <div class="row banner">
     <div class="col-12">
-        <h2 class="text-center"> Free delivery on all orders over £50!</h2>
+        <h2 class="text-center">Free delivery on all orders over £50!</h2>
         <p>*Delivery is 10% of all orders under £50</p>
     </div>
 </div>
 
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
-                <hr>
-            </div>
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr />
+            <h2 class="logo-font mb-4">Shopping Bag</h2>
+            <hr />
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col">
-                {% if bag_items %}
-                    <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col-sm-12">Product Info</th>
-                                    <th scope="col-sm-12"></th>
-                                    <th scope="col-sm-12">Price</th>
-                                    <th scope="col-sm-12">Qty</th>
-                                   
-                                </tr>
-                            </thead>
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col-sm-12">Product Info</th>
+                            <th scope="col-sm-12"></th>
+                            <th scope="col-sm-12">Price</th>
+                            <th scope="col-sm-12">Qty</th>
+                        </tr>
+                    </thead>
 
-                            {% for item in bag_items %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                    {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                                    {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
-                                    {% endif %}
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                        <p class="my-0 small text-muted">Size: {{ item.product.size }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0">£ {{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}"> 
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
-                                    </td>
-                                   
-                                </tr>
-                            {% endfor %}
-                            <tr>
-                                <td colspan="5" class="pt-5 text-right">
-                                    
-                                    <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                                  
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+                    {% for item in bag_items %}
+                    <tr>
+                        <td class="p-3 w-25">
+                            {% if item.product.image %}
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" />
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" />
+                            {% endif %}
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            <p class="my-0 small text-muted">Size: {{ item.product.size }}</p>
+                        </td>
+                        <td class="py-3">
+                            <p class="my-0">£ {{ item.product.price }}</p>
+                        </td>
+                        <td class="py-3 w-25">
+                            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" />
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-plus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <a class="update-link text-info"><small>Update</small></a>
+                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h6><strong>Subtotal: £{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
+                                <span class="text-uppercase">Secure Checkout</span>
+                                <span class="icon">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+
+            <!-- Help choosing quiz  -->
+
+            <div class="container text-left">
+                <h2 class="red text-center"><strong>Your bag is empty, how about some help choosing?</strong></h2>
+                <hr class="featurette-divider" />
+
+                <div class="row text-center">
+                    <div class="col-12">
+                        <i class="fas fa-poll-h fa-7x"></i>
                     </div>
-                {% else %}
+                </div>
 
-                      <!-- Help choosing quiz  -->
+                <form id="quiz">
+                    <!-- Question 1 -->
 
-                      <div class="container text-center">
-                    
-                        <h2 class="red"><strong>Your bag is empty, how about some help choosing?</strong></h2>
-                        <hr class="featurette-divider" />
-              
-                    <form id="quiz">
-                            <!-- Question 1 -->
-                            <br />
-                             <hr class="featurette-divider" />
-                            <div class="row quiz1">
-                                <div class="col-12">
-                                    <h2 class="text-center">What type of holiday do you prefer?</h2>
-                                </div>
-                            </div>
-                            <br />
-                            <label>
-                                <input type="radio" name="q1" value="an1" class="input-quiz" />
-                                Safari.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q1" value="lan2" class="input-quiz" />
-                                Country-side.
-                            </label>
-                            <br/>
-                            <label>
-                                <input type="radio" name="q1" value="pop3" class="input-quiz" />
-                                City break.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q2" value="an1" class="input-quiz" />
-                                Different to my usual.
-                            </label>
-                    
-                            
-                    
-                            <!-- Question 2 -->
-                            <br />
-                             <hr class="featurette-divider" />
-                            <div class="row quiz2">
-                                <div class="col-12">
-                                    <h3 class="text-center">What colour scheme do you prefer?</h3>
-                                </div>
-                            </div>
-                            <br />
-                            <label>
-                                <input type="radio" name="q2" value="an1" class="input-quiz" />
-                                Patterns and tones.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q2" value="an1" class="input-quiz" />
-                                High contrast.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q2" value="lan2" class="input-quiz" />
-                                Natural, primary colours.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q2" value="pop3" class="input-quiz" />
-                                Bright and bold.
-                            </label>
-                            <br />
-                       
-                            <!-- Question 3 -->
-                            <br />
-                             <hr class="featurette-divider" />
-                            <div class="row quiz3">
-                                <div class="col-12">
-                                    <h2 class="text-center">Where do you want to hang your picture?</h2>
-                                </div>
-                            </div>
-                            <br />
-                            <label>
-                                <input type="radio" name="q3" value="an1" class="input-quiz" />
-                                Your home or private collection.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q3" value="an1" class="input-quiz" />
-                                Somewhere where I can look and think.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q3" value="lan2" class="input-quiz" />
-                                Communal areas.
-                            </label>
-                            <br />
-                            <label>
-                                <input type="radio" name="q3" value="pop3" class="input-quiz" />
-                                I don't mind... just needs to be an attention grabber!
-                            </label>
-                            <br />
-                
-                            <!-- Quiz results section -->
-                            <div class="text-align">
-                                <p class="quiz-submit" id="submit-quiz" onclick="score()">Submit your answers</p>
-                                <p class="quiz-submit" id="reset" onclick="resetAnswer()">Reset</p>
-                            </div>
-                        </form>
-                        <br />
+                    <hr class="featurette-divider" />
+                    <div class="row quiz1">
+                        <div class="col-12">
+                            <h2>What type of holiday do you prefer?</h2>
+                        </div>
                     </div>
-                    <div id="answer" class="container text-center">Your result will appear here!</div>
                     <br />
-                </div>
-            <hr class="featurette-divider" />
-            <!-- End quiz section -->
+                    <label>
+                        <input type="radio" name="q1" value="an1" class="input-quiz" />
+                        Safari.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q1" value="lan2" class="input-quiz" />
+                        Country-side.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q1" value="pop3" class="input-quiz" />
+                        City break.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
+                        Different to my usual.
+                    </label>
 
-                      
-                        
+                    <!-- Question 2 -->
+                    <br />
+                    <hr class="featurette-divider" />
+                    <div class="row quiz2">
+                        <div class="col-12">
+                            <h3>What colour scheme do you prefer?</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="an1" class="input-quiz" />
+                        Patterns and tones.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                        High contrast.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="lan2" class="input-quiz" />
+                        Natural, primary colours.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q2" value="pop3" class="input-quiz" />
+                        Bright and bold.
+                    </label>
+                    <br />
 
+                    <!-- Question 3 -->
+                    <br />
+                    <hr class="featurette-divider" />
+                    <div class="row quiz3">
+                        <div class="col-12">
+                            <h3>Where do you want to hang your picture?</h3>
+                        </div>
+                    </div>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
+                        Your home or private collection.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="lan2" class="input-quiz" />
+                        Somewhere where I can look and think.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
+                        Communal areas.
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="q3" value="pop3" class="input-quiz" />
+                        I don't mind... just needs to be an attention grabber!
+                    </label>
+                    <br />
 
-                <div class="container text-center">
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
-                        <span class="text-uppercase">Keep Shopping</span>
-                    </a>
-                </div>
-                {% endif %}
+                    <!-- Quiz results section -->
+                    <div class="text-align text-center">
+                        <p class="quiz-submit btn" id="submit-quiz" onclick="score()">Submit</p>
+                        <p class="quiz-submit btn" id="reset" onclick="resetAnswer()">Reset</p>
+                    </div>
+                </form>
+                <br />
             </div>
+            <div id="answer" class="container text-center">Your result will appear here!</div>
+            <br />
         </div>
-   
-{% endblock %}
+        <hr class="featurette-divider" />
+        <!-- End quiz section -->
 
+        <div class="container text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %} 
 {% block postloadjs %}
 <script src="{% static 'bag/js/bag.js' %}"></script>
-{{ block.super }}
+{{ block.super }} 
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
+    $(".update-link").click(function (e) {
+        var form = $(this).prev(".update-form");
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
+    $(".remove-item").click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
+        var itemId = $(this).attr("id").split("remove_")[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var data = { csrfmiddlewaretoken: csrfToken };
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
-    
+        $.post(url, data).done(function () {
+            location.reload();
+        });
+    });
 </script>
 {% endblock %}

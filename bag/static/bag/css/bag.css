@@ -1,12 +1,12 @@
 /* quiz */
 
 #submit-quiz {
-    background: #008000;
+    background: #A1FFCE;
     padding: 12px;
     cursor: pointer;
 }
 #reset {
-    background: #ff0000;
+    background: #EF3B36;
     padding: 12px;
 }
 #answer {
@@ -22,4 +22,22 @@
 #quiz-submit:hover {
     background-color: #deb887;
     cursor: pointer;
+}
+
+.quiz1 {
+    background-image: linear-gradient(to right, #2980B9, #6DD5FA, #FFFFFF);
+    padding: 3px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.quiz2 {
+    background-image: linear-gradient(to right, #1D976C, #93F9B9, #ffffff);
+    padding: 3px;
+     border-radius: 0px 50px 50px 0px;
+}
+
+.quiz3 {
+    background-image: linear-gradient(to right, #6190E8, #A7BFE8, #ffffff);
+    padding: 3px;
+     border-radius: 0px 50px 50px 0px;
 }
