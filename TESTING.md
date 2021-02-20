@@ -34,7 +34,10 @@ and was left in to encourage the user to be more decisive.
 
 #### Bag 
 - The bag was tested through adding a range of products.  This included trying to 'break' the
-quantity increment value.  Quantity is capped at 20 and an alert appears if the user tries.
+quantity increment value.  Quantity is capped at 10 and an alert appears if the user tries.
+
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/quantity.png)
+
 
 #### Checkout
 - The checkout was tested by processing a purchase and also trying to make a purchase with
@@ -48,6 +51,8 @@ being able to save personal details)
 a user.  This is most evident in the checkout and bag apps.  Superusers are also able
 to post blogs through the django admin portal and this appears when blog has been posted.
 
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/successsignin.png)
+
 
 #### Links
 - External page links have all been tested and work.
@@ -56,6 +61,8 @@ to post blogs through the django admin portal and this appears when blog has bee
 
 - The blog was tested by going to list view, reading blog detail page, clicking on tags and
 similar post options for verification.  Comments can be left by any user and are posted clearly.
+
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blog_comment.png)
 
 
 ### Responsivness and Compatibility
