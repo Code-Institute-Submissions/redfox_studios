@@ -537,15 +537,18 @@ you will need to create a media/ file in order to host all media.
 The following resources can be accredited for reasons stated below:
 
 ### Project set up, Bag, Checkout and Profile apps
+Code Institute Boutique Ado Full Stack Framework module
+Stack Overflow
 
 
 ### Blog app
+Django 3 by example book by Antonio Mele
+Stack overlflow
 
 
 ### General resources:
-
-
-
+Code academy
+Milestone 2 and 3 projects
 
 
 ## Acknowledgements 
