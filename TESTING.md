@@ -15,6 +15,8 @@ tested across devices to ensure that its style across a range of devices was con
 Initially, the footer was slightly off center, however, adjustment of CSS styles
 corrected this with a decrease in the margin-right padding.
 
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/footer.png)
+
 #### Quiz
 -The quiz was tested by going through random responses.  Overall, most combinations lead to 
 a pre-selected answer e.g, You might like animals.  It is only if the user selects three distinct
@@ -33,7 +35,10 @@ quantity increment value.  Quantity is capped at 10 and an alert appears if the 
 incorrect details.  Alerts appear if a user tries to enter an incorrect number eg. 
 if the cc number entered is all 1's.  Checkout has been tested as a guest, user and 
 superuser without any discrepencies in consistency other than those expected (e.g, 
-being able to save personal details)
+being able to save personal details).  All checkouts were then followed up on the Stripe API for successful
+webhooks recieved.  
+
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/webhooks.png)
 
 #### Profile
 - The profile app was tested by registering, logging in and using page features as 
@@ -51,7 +56,7 @@ to post blogs through the django admin portal and this appears when blog has bee
 - The blog was tested by going to list view, reading blog detail page, clicking on tags and
 similar post options for verification.  Comments can be left by any user and are posted clearly.
 
-![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blog_comment.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment.png)
 
 
 ### Responsivness and Compatibility
@@ -143,7 +148,6 @@ Tests against user stories are as follows:
 7. Read, search and comment on blog posts so that I can be part of an online community.
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/navbar.png)
-![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/footer.png)
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/desktop3.png)
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/phone2.png)
 

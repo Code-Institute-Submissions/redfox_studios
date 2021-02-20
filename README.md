@@ -1,7 +1,6 @@
 # Readme file contents
 
 
-
 ![Page Banner](https://github.com/samc85/redfox_studios/blob/master/media/page_display.png)
 
 Live Site:  https://redfox-studios.herokuapp.com/
@@ -19,7 +18,6 @@ To make any purchases (as a guest, user, superuser):
 * Exp: 42/42
 * CVC:  424
 * Zip: 42424
-
 
 
 ### UX Design
@@ -298,7 +296,6 @@ Techsini
 
 Please refer to the TESTING.md file for information on site testing procedures.
 
-    TESTING.md 
 
 
 ## Deployment
@@ -548,9 +545,14 @@ Stack overlflow
 
 ### General resources:
 Code academy
-Milestone 2 and 3 projects
+Milestone 2 and 3 projects for code reference
 
 
 ## Acknowledgements 
+
+This site would not have been created without the support of friends (who tested the site throughout its development), fellow
+Code Institute students via Slack, the wealth of resources online in the form of CodeAcademy and StackOverflow and my Code Institute Mentor Aaron.
+
+All pictures and blogs were created by myself.
 
 
