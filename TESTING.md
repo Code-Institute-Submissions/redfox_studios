@@ -146,7 +146,10 @@ Tests against user stories are as follows:
 6. Be accessible on a range of devices so that I can access wherever I am.
 7. Read, search and comment on blog posts so that I can be part of an online community.
 
-
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/navbar.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/footer.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/desktop3.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/phone2.png)
 
 #### As a casual shopper I want to:
 
@@ -157,6 +160,11 @@ Tests against user stories are as follows:
 5. be made clearly aware of my delivery fees so that I know exactly what my expenses are.
 6. read, comment and be aware of similar blog posts so that I can read up on a topic easily.
 
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/shoppage.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productinfo.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/orderconfirmation.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/checkout.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment.png)
 #### As a site member I want to:
 
 
@@ -166,6 +174,9 @@ Tests against user stories are as follows:
 4. be able to log into the site with ease so that I do not face barriers in using the site.
 5. not have being a member impact upon any of the other user stories so that I am not negatively impacted.
 
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/signup.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/signin.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/personal_form.png)
 
 #### As an admin user I want to:
 
@@ -176,5 +187,7 @@ Tests against user stories are as follows:
 5. create blog posts to update users on content so that I can stay connected to my customer base.
 6. read, search and comment on blog posts so that I can interact further with my customers.
 
-
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productmanage.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productinfo.png)
+![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blog.png)
 ### Bugs
