@@ -234,3 +234,6 @@ Two bugs were found during development and solved as detailed below:
 
 ### Port 8000 not found
 
+* Towards the end of development, the page would not load via GitPod or Heroku without showing a 404 error and product not found.  This was despite
+no changes to code (at this point readme and minor style upgrades were being made).  This also only appeared on Google Chrome when using my laptop.
+Upon investigation, no clear reason was given, however one post in stack overflow suggested clearing the browser history and cache, which resolved the problem.
