@@ -140,14 +140,20 @@ Tests against user stories are as follows:
 #### As a first time user I want to:
 
 1. Navigate all areas of a site with ease so that I can find what I am looking for.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/navbar.png)
+
 2. Understand what the site purpose is so that I can make informed choices.
 3. Clearly recognise the different make up of the site so that I can recall its key features for future visits.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/desktop3.png)
+
 4. Be able to find a contact for the site owners so that I can make any customer queries.
 5. Be visually accessible so that the site is easy to navigate and view.
 6. Be accessible on a range of devices so that I can access wherever I am.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/phone2.png)
+
 7. Read, search and comment on blog posts so that I can be part of an online community.
 
 
@@ -155,26 +161,41 @@ Tests against user stories are as follows:
 #### As a casual shopper I want to:
 
 1. browse and search for products by name and price range so that I can make informed purchases.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/shoppage.png)
+
 2. look at a product in more detail without being unsure on what I am purchasing so that I feel confident as a shopper.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productinfo.png)
+
 3. make a purchase securely and safely so that I do not fear any security reasons.
 4. receive confirmation of my order so that I have peace of mind for my order.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/orderconfirmation.png)
+
 5. be made clearly aware of my delivery fees so that I know exactly what my expenses are.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/checkout.png)
+
 6. read, comment and be aware of similar blog posts so that I can read up on a topic easily.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment.png)
 
 #### As a site member I want to:
 
 
 1. register and subsequently log into the site so that I can have my personal details and order history saved.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/signup.png)
+
 2. view my profile and order history so that I can keep track of my site usage.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/signin.png)
+
 3. have my details pre-saved in order to make future purchases more streamlined so that I can save time.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/personal_form.png)
+
 4. be able to log into the site with ease so that I do not face barriers in using the site.
 5. not have being a member impact upon any of the other user stories so that I am not negatively impacted.
 
@@ -184,13 +205,18 @@ Tests against user stories are as follows:
 #### As an admin user I want to:
 
 1. add 'data' to the site in the form of products and blogs so that I can reach my customers.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productmanage.png)
+
 2. be able to log in with extra features so that I can access what I need.
 3. be able to Add, edit and delete products in the store so that I can keep products up to date and relevant.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/productinfo.png)
+
 4. fulfil all other user stories without being obstructed by being an admin so that I can experience the site as a customer.
 5. create blog posts to update users on content so that I can stay connected to my customer base.
 6. read, search and comment on blog posts so that I can interact further with my customers.
+
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blog.png)
 
 
