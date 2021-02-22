@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-# add description and size models once set
 
 
 class Product(models.Model):

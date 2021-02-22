@@ -544,8 +544,11 @@ Stack overlflow
 
 
 ### General resources:
-Code academy
+The following resources were used throughout the project as reference: 
+
+Codeacademy
 Milestone 2 and 3 projects for code reference
+W3 Schools
 
 
 ## Acknowledgements 
