@@ -4,4 +4,7 @@ from django.shortcuts import render
 
 
 def quiz(request):
+    """
+    View to render quiz page
+    """
     return render(request, 'quiz/quiz.html')

@@ -5,14 +5,14 @@
 {% block content %}
 
 
-  <!-- Hero Image / carousel from Bootstrap used to render on ios devices-->
+<!-- Hero Image / carousel from Bootstrap used to render on ios devices-->
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <img src="{% get_media_prefix %}fox.jpg" class="d-block w-100" alt="display image">
-        </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <img src="{% get_media_prefix %}fox.jpg" class="d-block w-100" alt="display image">
+</div>
 
+<!-- Banner for home page -->
 
-<div>
     <div class="p-4 p-md-5 mb-4 text-white rounded background-black-red">
         <div class="col-md-6 px-0">
             <h1 class="display-4 fst-italic">Welcome to Red Fox Studios</h1>
@@ -55,13 +55,11 @@
                 </div>
             </div>
         </div>
-
         <hr class="featurette-divider" />
-        <!-- faq -->
+
+<!-- faq section -->
         <br />
-
-
-        <div class="row featurette text-center">
+    <div class="row featurette text-center">
             <div class="col-md-5">
                 <h1 class="featurette-heading text-center">FAQ</h1>
                 <hr class="featurette-divider" />
@@ -80,7 +78,7 @@
         </div>
         <hr class="featurette-divider" />
     </div>
-</div>
+
 
 <br />
 {% endblock %}

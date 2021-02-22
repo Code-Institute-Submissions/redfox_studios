@@ -296,7 +296,7 @@ Techsini
 
 Please refer to the TESTING.md file for information on site testing procedures.
 
-[Testing.md][ (https://github.com/samc85/redfox_studios/blob/master/TESTING.md)
+[Testing.md](https://github.com/samc85/redfox_studios/blob/master/TESTING.md)
 
 ## Deployment
 
