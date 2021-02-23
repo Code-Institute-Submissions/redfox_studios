@@ -5,13 +5,23 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
+
+
+<!-- Additional space divs placed in order to space out page elements -->
 <div class="space">
     </div>
 <hr>
+<div class="space">
+    </div>
 <h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
+<div class="space">
+    </div>
 <hr>
+<div class="space">
+    </div>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
-
+<div class="space">
+    </div>
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {% if redirect_field_value %}
@@ -20,7 +30,8 @@
   <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Cancel</a>
   <button type="submit">{% trans 'Sign Out' %}</button>
 </form>
-
+<div class="space">
+    </div>
 <br>
 
 {% endblock %}

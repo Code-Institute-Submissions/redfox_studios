@@ -2,30 +2,35 @@
 
 ### Features
 
-Features of the page were tested as follows:
+Features of the page were tested as follows.  Tests included entering 'wrong' information or data in order to test for 'breaks' in code.
 
 #### Navbar
 - The Navbar was tested to ensure that both its links all worked and that its dropdown
 feature worked responsively.  This was tested and found successful.  Initial examples 
 required styling of the elements in order to come to its final rendering.
+All links were checked to follow the correct path and the drop down was tested on a variety of screens to check responsive view.  There were
+no discrepencies in navbar view or link paths.
 
 #### Footer
--The footer was tested to ensure that all links were working.  The footer was also
+- The footer was tested to ensure that all links were working.  The footer was also
 tested across devices to ensure that its style across a range of devices was consistent.
 Initially, the footer was slightly off center, however, adjustment of CSS styles
-corrected this with a decrease in the margin-right padding.
+corrected this with a decrease in the margin-right padding.  All links to external pages open up in seperate windows.
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/footer.png)
 
 #### Quiz
--The quiz was tested by going through random responses.  Overall, most combinations lead to 
-a pre-selected answer e.g, You might like animals.  It is only if the user selects three distinct
-answer categories a try again message will appear.  This is only achievable through one combination 
-and was left in to encourage the user to be more decisive.
+-The quiz was tested by going through random responses.  If a user clicks submit before any submissions it will prompt them
+to try again.  If the user scores 1 for each of the categories in the code, a try again message will appear.  However, answers have been
+set out so that one of the 3 categories will receive 2/3 points.  The reset button works throughout the quiz process.  If a user only 
+answers 2 questions and the scores are even for the two different categories, a try again message will appear.
 
 #### Bag 
 - The bag was tested through adding a range of products.  This included trying to 'break' the
-quantity increment value.  Quantity is capped at 10 and an alert appears if the user tries.
+quantity increment value.  Quantity is capped at 10 and an alert appears if the user tries to go beyond through either button.
+If the user clicks on the bag without anything in there they are directed towards the quiz.  If the user adds/removes the items
+these are updated accordingly and the totals (including delivery) are updated to reflect this both on the bag page and in the top right
+corner on display.
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/quantity.png)
 
@@ -37,6 +42,9 @@ if the cc number entered is all 1's.  Checkout has been tested as a guest, user 
 superuser without any discrepencies in consistency other than those expected (e.g, 
 being able to save personal details).  All checkouts were then followed up on the Stripe API for successful
 webhooks recieved.  
+If the checkout is attempted with an incorrect card number, an error appears telling the user their details are wrong.
+If a user has not filled in a section that is required, the process will not be completed and the user is redirected to complete.
+
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/webhooks.png)
 
@@ -44,6 +52,13 @@ webhooks recieved.
 - The profile app was tested by registering, logging in and using page features as 
 a user.  This is most evident in the checkout and bag apps.  Superusers are also able
 to post blogs through the django admin portal and this appears when blog has been posted.
+Only superusers are able to view the the Product Management Page and it does not appear for other users.
+For general users, the My Profile page will appear but no product management.
+Superusers are able to access the edit / delete buttons on products.  
+General users are unable to access products this way and will just see the products themselves. 
+
+If a general user is logged in and tries to access the Django admin, they are given a message that they do not
+have access.  This is the same for users not logged in who try to access the admin are prompted to log in.  
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/successsignin.png)
 
@@ -55,8 +70,27 @@ to post blogs through the django admin portal and this appears when blog has bee
 
 - The blog was tested by going to list view, reading blog detail page, clicking on tags and
 similar post options for verification.  Comments can be left by any user and are posted clearly.
+If a user tries to post a comment without filling in all the fields an error message appears telling the user to 
+fill in the requested field. 
+Pagination appears at the bottom of the blog and increases page count beyond 3 blog posts.  Users are able to move around the blog pages, 
+through tags, pagination and similar posts without breaking any page paths.
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment.png)
+
+
+### About Page (studio)
+
+- The about page studio dropdown works as expected.  Users can click on either the old or new studio button and the content drops down.  
+Users can click on the same button or a 'close' button appears at the bottom of the content in order for the content to hide.  If a user
+doesn't close after viewing, the new studio content will appear under the old studio page.  Both can be closed again with either the 
+close button or clicking on the old or new studio buttons.
+
+### Search bar
+
+- The search bar is present in the nav dropdown and on the products page.  The search bar searches by name and
+by numbers and states this to the user in the placeholder.  The search works both lower and uppercase, for example searching
+for for 'penguin' and 'PENGUIN' returns a penguin product.  In searching for price a user can search for either 10.00 or 10 to return products
+for that price.  
 
 
 ### Responsivness and Compatibility
@@ -98,6 +132,10 @@ The site was also shared amongst friends and families.  The following was fed ba
 - Footer was off center on mobile devices (this was later corrected)
 - Overly stylised font choice, this was changed to one more readable
 - Site was found to be professional looking, clear and fit for purpose.
+- Blog and Quiz were valued sections and the product page was well set out to show products clearly 
+
+Users were provided with both the test card number and an incorrect one.  Users who used the correct one were successful, however
+the incorrect numbers returned an error. 
 
 ### Validation Services
 
