@@ -1,10 +1,10 @@
+// Javascript for About page hide/show old and new studio content 
 
- $(function () {
+$(function () {
         $("#show").click(function () {
             $(".old-about").slideToggle("slow");
         });
     });
-
 
      $(function () {
         $("#hide").click(function () {

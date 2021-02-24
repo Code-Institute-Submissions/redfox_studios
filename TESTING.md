@@ -279,4 +279,5 @@ Upon investigation, no clear reason was given, however one post in stack overflo
 ### Debug false 
 
 * When environ variable debug is turned false (for production), static files do not work in the local server (Github), however, all 
-functionality works in the deployed version on Heroku
+functionality works in the deployed version on Heroku.  In looking at both the Slack CI channel and StackOverflow this is not an
+uncommon problem and if the page is worked on in a development scenario in the future the debug can be changed back to True.
