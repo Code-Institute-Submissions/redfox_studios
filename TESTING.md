@@ -275,3 +275,8 @@ Two bugs were found during development and solved as detailed below:
 * Towards the end of development, the page would not load via GitPod or Heroku without showing a 404 error and product not found.  This was despite
 no changes to code (at this point readme and minor style upgrades were being made).  This also only appeared on Google Chrome when using my laptop.
 Upon investigation, no clear reason was given, however one post in stack overflow suggested clearing the browser history and cache, which resolved the problem.
+
+### Debug false 
+
+* When environ variable debug is turned false (for production), static files do not work in the local server (Github), however, all 
+functionality works in the deployed version on Heroku
