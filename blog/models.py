@@ -5,7 +5,14 @@ from taggit.managers import TaggableManager
 from profiles.models import UserProfile
 
 
+
+
+
 class PublishedManager(models.Manager):
+    """
+    Models to inform blog posts
+    Publish/draft status created to allow users to check blog first
+    """
     def get_queryset(self):
         return super().get_queryset().filter(status='published')
 
@@ -45,6 +52,9 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Models to add comment
+    """
     post = models.ForeignKey(Post,
                              on_delete=models.CASCADE,
                              related_name='comments')
