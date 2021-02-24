@@ -23,8 +23,9 @@ corrected this with a decrease in the margin-right padding.  All links to extern
 #### Quiz
 - The quiz was tested by going through random responses.  If a user clicks submit before any submissions it will prompt them
 to try again.  If the user scores 1 for each of the categories in the code, a try again message will appear.  However, answers have been
-set out so that one of the 3 categories will receive 2/3 points.  The reset button works throughout the quiz process.  If a user only 
-answers 2 questions and the scores are even for the two different categories, a try again message will appear.
+set out so that one of the 3 categories will receive 3 points.  The reset button works throughout the quiz process.  If a user only 
+answers 3 or less questions and the scores are even for the two different categories, a try again message will appear.  If a user comes across a score 
+where there is no higher total, the try again message will appear.
 
 #### Bag 
 - The bag was tested through adding a range of products.  This included trying to 'break' the
