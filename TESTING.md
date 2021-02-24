@@ -8,7 +8,8 @@ Features of the page were tested as follows.  Tests included entering 'wrong' in
 - The Navbar was tested to ensure that both its links all worked and that its dropdown
 feature worked responsively.  This was tested and found successful.  Initial examples 
 required styling of the elements in order to come to its final rendering.
-All links were checked to follow the correct path and the drop down was tested on a variety of screens to check responsive view.  There were
+
+- All links were checked to follow the correct path and the drop down was tested on a variety of screens to check responsive view.  There were
 no discrepencies in navbar view or link paths.
 
 #### Footer
@@ -20,7 +21,7 @@ corrected this with a decrease in the margin-right padding.  All links to extern
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/footer.png)
 
 #### Quiz
--The quiz was tested by going through random responses.  If a user clicks submit before any submissions it will prompt them
+- The quiz was tested by going through random responses.  If a user clicks submit before any submissions it will prompt them
 to try again.  If the user scores 1 for each of the categories in the code, a try again message will appear.  However, answers have been
 set out so that one of the 3 categories will receive 2/3 points.  The reset button works throughout the quiz process.  If a user only 
 answers 2 questions and the scores are even for the two different categories, a try again message will appear.
@@ -42,7 +43,8 @@ if the cc number entered is all 1's.  Checkout has been tested as a guest, user 
 superuser without any discrepencies in consistency other than those expected (e.g, 
 being able to save personal details).  All checkouts were then followed up on the Stripe API for successful
 webhooks recieved.  
-If the checkout is attempted with an incorrect card number, an error appears telling the user their details are wrong.
+
+- If the checkout is attempted with an incorrect card number, an error appears telling the user their details are wrong.
 If a user has not filled in a section that is required, the process will not be completed and the user is redirected to complete.
 
 
@@ -57,7 +59,7 @@ For general users, the My Profile page will appear but no product management.
 Superusers are able to access the edit / delete buttons on products.  
 General users are unable to access products this way and will just see the products themselves. 
 
-If a general user is logged in and tries to access the Django admin, they are given a message that they do not
+- If a general user is logged in and tries to access the Django admin, they are given a message that they do not
 have access.  This is the same for users not logged in who try to access the admin are prompted to log in.  
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/successsignin.png)
@@ -72,7 +74,8 @@ have access.  This is the same for users not logged in who try to access the adm
 similar post options for verification.  Comments can be left by any user and are posted clearly.
 If a user tries to post a comment without filling in all the fields an error message appears telling the user to 
 fill in the requested field. 
-Pagination appears at the bottom of the blog and increases page count beyond 3 blog posts.  Users are able to move around the blog pages, 
+
+- Pagination appears at the bottom of the blog and increases page count beyond 3 blog posts.  Users are able to move around the blog pages, 
 through tags, pagination and similar posts without breaking any page paths.
 
 ![Mobile display](https://github.com/samc85/redfox_studios/blob/master/media/blogcomment.png)
